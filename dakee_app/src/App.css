@@ -13,15 +13,19 @@
 }
 
 body{
+  
   background: linear-gradient(180deg, #EA4F32 0%, #F06B52 0.01%, #F45033 0.02%, #E80F5D 100%);
 }
 
 
+
 .logo{
-  left: 86px;
-  top: 367px;
+  
+  top: 15%;
   width: 202px;
   height: 78px;
+  position: absolute;
+
   
 }
 
@@ -31,11 +35,10 @@ body{
 }
 
 .logo_text{
-  top: 710px;
+  top: 310px;
   height: 40px;
   width: 175px;
-  left: 94px;
-
+  margin: 0 auto;
 }
 
 .logo_text p{

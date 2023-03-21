@@ -1,17 +1,27 @@
-import { Routes , Route } from 'react-router-dom'
+import React from 'react';
+import { Routes , Route, Router, BrowserRouter } from 'react-router-dom'
 import './App.css';
-import {Container} from "react-bootstrap";
-import { home } from './pages/home';
+import HomePage from './pages/home';
+import LoginPage from './pages/login';
+import SignupPage from './pages/signup';
+import TutorialPage from './pages/tutorial';
+import QuestionairePage from './pages/questionaire';
 
-function App() {
-  return <Container>(
-    <Route path="/" element={<home />} />
-    <Route path="/login" element={<login />} />
-    <Route path="/signup" element={<signup />} />
-    <Route path="/tutorial" element={<tutorial />} />
-    <Route path="/questionaire" element={<questionaire />} />
-  
+
+export interface IApplicationProps {}
+
+const Application: React.FunctionComponent<IApplicationProps> = (props) => {
+  return (
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={ <HomePage />} />
+      <Route path='login' element={ <LoginPage />} />
+      <Route path='signup' element={ <SignupPage />} />
+      <Route path='tutorial' element={ <TutorialPage />} />
+      <Route path='questionaire' element={ <QuestionairePage />} />
+    </Routes>
+  </BrowserRouter>
   );
-}
+};
 
-export default App;
+export default Application;
