@@ -2,9 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  position: absolute;
-  width: 375px;
-  height: 820px;
   left: 0px;
   top: 0px;
   font-family: 'Inter', sans-serif;
@@ -13,37 +10,38 @@
 }
 
 body{
-  
+  width: 375px;
+  height: 820px;
   background: linear-gradient(180deg, #EA4F32 0%, #F06B52 0.01%, #F45033 0.02%, #E80F5D 100%);
 }
 
+/*HOME PAGE*/
 
 
-.logo{
+.logo , .logo_login{
   
-  top: 15%;
+  margin-top: 40%;
   width: 202px;
   height: 78px;
-  position: absolute;
-
   
 }
 
-.logo img{
+.logo img {
   width: 202px;
   height: 78px;
+  left: 88px;
 }
 
-.logo_text{
-  top: 310px;
-  height: 40px;
-  width: 175px;
-  margin: 0 auto;
+.logo_login img{
+  width: 198px;
+  height: 65px;
+  left: 88px;
 }
 
-.logo_text p{
-  height: 40px;
-  width: 175px;
+
+p{
+  padding-top: 20px;
+  margin-left: -100px;
   text-align: center;
   font-size: 15px;
   font-weight: 400;
@@ -51,4 +49,31 @@ body{
   letter-spacing: 0em;
   color: #FFBABA;
 }
+
+/*LOGIN PAGE*/
+
+h2 , h4{
+  color: #ffffff;
+}
+
+h2{
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+
+}
+
+h4{
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFABAB;
+}
+
 
