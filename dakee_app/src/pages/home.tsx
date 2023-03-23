@@ -8,8 +8,9 @@ export interface IHomePageProps {};
 const HomePage: React.FunctionComponent<IHomePageProps> = props => {
 
    const handleClick = (event: MouseEvent) => {
-      console.log("Hello")
+      window.location.href="login"
    }
+
 
    return (
       <div onClick={handleClick} id="body_logo">
