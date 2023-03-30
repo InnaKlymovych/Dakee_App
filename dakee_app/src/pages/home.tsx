@@ -17,11 +17,11 @@ const HomePage: React.FunctionComponent<IHomePageProps> = props => {
          <div className="logo">
             <img src={logo_img} alt="img_logo" />
          </div>
+         <div className="logo_text">
+            <p>Tap anywhere <br /> to continue</p>
+         </div>  
          
-         <p>Tap anywhere <br /> to continue</p>
-         
-      
-   </div>
+      </div>
    );
 }
 

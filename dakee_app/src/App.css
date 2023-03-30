@@ -1,3 +1,11 @@
+:root{
+  --primary: linear-gradient(180deg, #EA4F32 0%, #F06B52 0.01%, #F45033 0.02%, #E80F5D 100%);
+  --white: #ffffff;
+  --pink-light: #FFBABA;
+  --orange: #F0694F;
+  --pink-dark: #E80F5D; 
+
+}
 *{
   padding: 0;
   margin: 0;
@@ -9,20 +17,29 @@
   
 }
 
-body{
+#root{
   width: 375px;
   height: 820px;
-  background: linear-gradient(180deg, #EA4F32 0%, #F06B52 0.01%, #F45033 0.02%, #E80F5D 100%);
+  background: var(--primary);
 }
 
 /*HOME PAGE*/
 
+#body_logo{
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+align-content: center;
+}
 
-.logo , .logo_login{
+
+.logo {
   
-  margin-top: 40%;
   width: 202px;
   height: 78px;
+  top: 367px;
   
 }
 
@@ -32,29 +49,50 @@ body{
   left: 88px;
 }
 
-.logo_login img{
-  width: 198px;
-  height: 65px;
-  left: 88px;
+.logo_text{
+bottom: 70px;
 }
 
-
 p{
-  padding-top: 20px;
-  margin-left: -100px;
+  
   text-align: center;
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
-  color: #FFBABA;
+  color: var(--pink-light);
 }
 
 /*LOGIN PAGE*/
 
-/*display-flex da pagina!!!*/
+
+#login{
+  top: 367px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  
+}
+
+.logo_login{
+  margin-top: 110px;
+  width: 202px;
+  height: 80px;
+}
+
+.login_text1{
+  height: 88px;
+  width: 242px;
+  left: 50px;
+  top: 274px;
+  border-radius: nullpx;
+
+}
 h2 , h4{
-  color: #ffffff;
+  color: var(--white);
 }
 
 h2{
@@ -64,6 +102,7 @@ h2{
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
+  text-align: left;
 
 }
 
@@ -74,12 +113,39 @@ h4{
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
-  color: #FFABAB;
+  color: var(--pink-light);
+}
+
+.login_text2{
+  margin-top: -120px;
 }
 
 button{
+  
+  align-items: center;
   width: 223px;
   height: 75px;
   border-radius: 70px;
-  border: solid 2px #ffffff;
+  border: solid 2px var(--white);
+  background-color: transparent;
+  color: var(--white);
 }
+
+.login_text3{
+  margin-top:-100px;
+}
+
+/*SIGN UP*/
+
+.signup{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 367px;
+  justify-content: space-around;
+  align-content: center;
+  
+}
+
+
