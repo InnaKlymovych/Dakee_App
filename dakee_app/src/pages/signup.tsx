@@ -10,14 +10,12 @@ import apple from '../images/icons/apple.svg';
 
 export interface ISignupPageProps {};
 
-/*const onSubmitUsername = (username, password) => alert(`You entered: ${username} and password ${password}`);
-*/
+
 const SignupPage: React.FunctionComponent<ISignupPageProps> = props => {
    const handleClick = (event: MouseEvent) => {
       window.location.href="login"
    }
-   /*const onSubmitUsername = (username, password) => 
-   alert(`You entered: ${username} and password ${password}`);*/
+
 
    return (
    <div className="signup" id='signup'>
@@ -32,7 +30,7 @@ const SignupPage: React.FunctionComponent<ISignupPageProps> = props => {
             <img src={logo_img} alt="img_logo" />
       </div>
 
-      <h3>Sign up with e-mail</h3>
+      <h3>Sign up <br/>with e-mail</h3>
 
       <div className='login_form' >
          <LoginForm />
@@ -41,9 +39,9 @@ const SignupPage: React.FunctionComponent<ISignupPageProps> = props => {
       <p>or sign up using:</p>
 
       <div className="icons">
-         <img src={facebook} alt="facebook" /> 
-         <img src={google} alt="google" />
-         <img src={apple} alt="apple" />
+         <a href="https://www.facebook.com/"><img src={facebook} alt="facebook" /> </a>
+         <a href="https://www.google.com/?safe=active&ssui=on"><img src={google} alt="google" /></a>
+         <a href="https://www.apple.com/ca/store?afid=p238%7CYccrbc3X-dc_mtid_1870765e38482_pcrid_78134249231620_pgrid_5206919623_pntwk_o_pchan__pexid__&cid=aos-ca-kwbi-brand--slid---product-"><img src={apple} alt="apple" width="26px" height="30px" /></a>
       </div>
 
    </div>
