@@ -10,20 +10,20 @@ export interface ITutorialcPageProps {};
 const TutorialcPage: React.FunctionComponent<ITutorialcPageProps> = props => {
 
    const handleClick = (event: MouseEvent) => {
-      window.location.href="tutoriald"
+      window.location.href=""
    }
    return (
    <div onClick={handleClick} className='tutorial_up' id='tutorial_up' >
       <img src={logo_small} alt="logo" />
       <div className="tutorial_c_box">
          <div className="tutorial_c_text1">
-            <h2>Hi, Inna! <br /> Here´s a short <br />tutorial for you:</h2>
+            <h2>Who is a Local?</h2>
          </div>
          <img src={vectorUp} alt="vectorUp" />
          <div className="tutorial_c_text2">
-            <p>Dakee was created to give the real, non-touristic experience in a visited city. 
-               Based on your interests, we connect Travellers and Locals to exchange 
-               ideas and give tips on what is actually worth to do and see. No tourist cliché!
+            <p>A Local is a person who lives in a city and wants to give some tips to visitors. 
+            He or she recieves later avaliations from the Travellers. Each avaliation has a point 
+            value that can be exchanges for many rewards and discounts from our Partners.
             </p>
          </div>
          <div className="ellipse">

@@ -6,7 +6,7 @@ import LoginPage from './pages/login';
 import SignupPage from './pages/signup';
 import TutorialPage from './pages/tutorial';
 import TutorialbPage from './pages/tutorialb';
-import TutorialcPage from './pages/tutorialb';
+import TutorialcPage from './pages/tutorialc';
 import QuestionairePage from './pages/questionaire';
 
 
