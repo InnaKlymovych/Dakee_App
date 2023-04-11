@@ -6,6 +6,7 @@
   --pink-dark: #E80F5D; 
 
 }
+
 *{
   padding: 0;
   margin: 0;
@@ -275,3 +276,23 @@ a{
   justify-content: space-around;
   align-content: center;
 }
+
+/*TUTORIAL_B*/
+
+.tutorial_back{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.tutorial_back_button{
+  width: 11px;
+  height: 23px;
+  margin-bottom: 10px;
+  
+}
+
+.tutorial_back>button{
+  border:transparent;
+}
+

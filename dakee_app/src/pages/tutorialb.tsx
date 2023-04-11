@@ -4,6 +4,8 @@ import logo_small from '../images/icons/logo_small.png';
 import plane from '../images/icons/Plane.png';
 import ellipse1 from '../images/icons/Ellipse 1.png'
 import ellipse2 from '../images/icons/Ellipse 2.png'
+import back from '../images/icons/back.svg';
+
 
 export interface ITutorialbPageProps {};
 
@@ -12,9 +14,18 @@ const TutorialbPage: React.FunctionComponent<ITutorialbPageProps> = props => {
    const handleClick = (event: MouseEvent) => {
       window.location.href="tutorialc"
    }
+   const buttonHandler = (event: MouseEvent) => {
+      window.location.href="tutorial"
+   }
    return (
    <div onClick={handleClick} className='tutorial_plane' id='tutorial_plane' >
-      <img src={logo_small} alt="logo" />
+      <div className="tutorial_back">
+         <button className='tutorial_back_button' onClick={buttonHandler}>
+            <img src={back} alt="back" />
+         </button>
+         <img src={logo_small} alt="logo" />
+      </div>
+      
       <div className="tutorial_b_box">
          <div className="tutorial_b_text1">
             <h2>Hi, Inna! <br /> Here´s a short <br />tutorial for you:</h2>

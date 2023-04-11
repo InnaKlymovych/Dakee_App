@@ -7,6 +7,8 @@ import SignupPage from './pages/signup';
 import TutorialPage from './pages/tutorial';
 import TutorialbPage from './pages/tutorialb';
 import TutorialcPage from './pages/tutorialc';
+import TutorialdPage from './pages/tutoriald';
+import TutorialePage from './pages/tutoriale';
 import QuestionairePage from './pages/questionaire';
 
 
@@ -22,6 +24,8 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='tutorial' element={ <TutorialPage />} />
       <Route path='tutorialb' element={ <TutorialbPage />} />
       <Route path='tutorialc' element={ <TutorialcPage />} />
+      <Route path='tutoriald' element={ <TutorialdPage />} />
+      <Route path='tutoriale' element={ <TutorialePage />} />
       <Route path='questionaire' element={ <QuestionairePage />} />
     </Routes>
   </BrowserRouter>

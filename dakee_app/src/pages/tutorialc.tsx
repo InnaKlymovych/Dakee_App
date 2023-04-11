@@ -4,17 +4,23 @@ import logo_small from '../images/icons/logo_small.png';
 import vectorUp from '../images/icons/Vector (1).png';
 import ellipse1 from '../images/icons/Ellipse 1.png'
 import ellipse2 from '../images/icons/Ellipse 2.png'
+import back from '../images/icons/back.svg';
 
 export interface ITutorialcPageProps {};
 
 const TutorialcPage: React.FunctionComponent<ITutorialcPageProps> = props => {
 
    const handleClick = (event: MouseEvent) => {
-      window.location.href=""
+      window.location.href="tutoriald"
    }
    return (
    <div onClick={handleClick} className='tutorial_up' id='tutorial_up' >
-      <img src={logo_small} alt="logo" />
+      <div className="tutorial_back">
+         <button className='tutorial_back_button' >
+            <img src={back} alt="back" />
+         </button>
+         <img src={logo_small} alt="logo" />
+      </div>
       <div className="tutorial_c_box">
          <div className="tutorial_c_text1">
             <h2>Who is a Local?</h2>
