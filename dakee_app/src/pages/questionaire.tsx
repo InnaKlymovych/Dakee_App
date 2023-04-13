@@ -18,9 +18,7 @@ const QuestionairePage: React.FunctionComponent<IQuestionairePageProps> = props 
          <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
-         <button>
             <img src={logo_small} alt="logo" />
-         </button>
       </div>
       <h2>1/5</h2>
       <p>I am a:</p>
