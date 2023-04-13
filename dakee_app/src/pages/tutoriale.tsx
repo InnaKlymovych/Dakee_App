@@ -11,10 +11,14 @@ const TutorialePage: React.FunctionComponent<ITutorialePageProps> = props => {
       window.location.href="questionaire"
    }
 
+   const buttonHandler1 = (event: MouseEvent) => {
+      window.location.href="tutoriald"
+   }
+
    return (
    <div className='happy' id='happy' >
       <div className="tutorial_back">
-         <button className='tutorial_back_button' >
+         <button className='tutorial_back_button'  onClick={buttonHandler1}>
             <img src={back} alt="back" />
          </button>
          <img src={logo_small} alt="logo" />

@@ -13,35 +13,40 @@ const TutorialcPage: React.FunctionComponent<ITutorialcPageProps> = props => {
    const handleClick = (event: MouseEvent) => {
       window.location.href="tutoriald"
    }
+   const buttonHandler = (event: MouseEvent) => {
+      window.location.href="tutorialb"
+   }
    return (
-   <div onClick={handleClick} className='tutorial_up' id='tutorial_up' >
-      <div className="tutorial_back">
-         <button className='tutorial_back_button' >
+      <div className="tutorialb_main">
+         <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
-         <img src={logo_small} alt="logo" />
-      </div>
-      <div className="tutorial_c_box">
-         <div className="tutorial_c_text1">
-            <h2>Who is a Local?</h2>
-         </div>
-         <img src={vectorUp} alt="vectorUp" />
-         <div className="tutorial_c_text2">
-            <p>A Local is a person who lives in a city and wants to give some tips to visitors. 
-            He or she recieves later avaliations from the Travellers. Each avaliation has a point 
-            value that can be exchanges for many rewards and discounts from our Partners.
-            </p>
-         </div>
-         <div className="ellipse">
-            <img src={ellipse2} alt="ellipse2" />            
-            <img src={ellipse2} alt="ellipse2" />
-            <img src={ellipse1} alt="ellipse1" />
-            <img src={ellipse2} alt="ellipse2" />
-         </div>
-         <p>Scip the tutorial</p>
-      </div>
-      
+         <div onClick={handleClick} className='tutorial_up' id='tutorial_up' >
+            <div className="tutorial_back">
+               <img src={logo_small} alt="logo" />
+            </div>
+            <div className="tutorial_c_box">
+               <div className="tutorial_c_text1">
+                  <h2>Who is a Local?</h2>
+               </div>
+               <img src={vectorUp} alt="vectorUp" />
+               <div className="tutorial_c_text2">
+                  <p>A Local is a person who lives in a city and wants to give some tips to visitors. 
+                  He or she recieves later avaliations from the Travellers. Each avaliation has a point 
+                  value that can be exchanges for many rewards and discounts from our Partners.
+                  </p>
+               </div>
+               <div className="ellipse">
+                  <img src={ellipse2} alt="ellipse2" />            
+                  <img src={ellipse2} alt="ellipse2" />
+                  <img src={ellipse1} alt="ellipse1" />
+                  <img src={ellipse2} alt="ellipse2" />
+               </div>
+               <p>Scip the tutorial</p>
+            </div>
 
+
+         </div>
    </div>
    );
 }

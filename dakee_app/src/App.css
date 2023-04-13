@@ -1,7 +1,7 @@
 :root{
   --primary: linear-gradient(180deg, #EA4F32 0%, #F06B52 0.01%, #F45033 0.02%, #E80F5D 100%);
   --white: #ffffff;
-  --pink-light: #FFBABA;
+  --pink-light: #FFABAB;
   --orange: #F0694F;
   --pink-dark: #E80F5D; 
 
@@ -22,6 +22,7 @@
   width: 375px;
   height: 820px;
   background: var(--primary);
+  
 }
 
 /*HOME PAGE*/
@@ -279,20 +280,45 @@ a{
 
 /*TUTORIAL_B*/
 
-.tutorial_back{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 20px;
-}
+
 .tutorial_back_button{
   width: 11px;
   height: 23px;
   margin-bottom: 10px;
-  
-}
-
-.tutorial_back>button{
   border:transparent;
 }
+
+
+
+/*QUESTIONAIRE*/
+
+.questionaire_button{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.buttons{
+  width: 133px;
+  height: 133px;
+  border-radius: 20px;
+  border: transparent;
+}
+
+.buttons_text{
+  width: 133px;
+  height: 133px;
+  border-radius: 20px;
+}
+
+a{
+  color: var(--pink-light);
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+
 

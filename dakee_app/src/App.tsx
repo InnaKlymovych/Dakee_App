@@ -10,7 +10,9 @@ import TutorialcPage from './pages/tutorialc';
 import TutorialdPage from './pages/tutoriald';
 import TutorialePage from './pages/tutoriale';
 import QuestionairePage from './pages/questionaire';
-
+import QuestionairebPage from './pages/questionaireb';
+import QuestionairecPage from './pages/questionairec';
+import QuestionairedPage from './pages/questionaired';
 
 export interface IApplicationProps {}
 
@@ -27,6 +29,9 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='tutoriald' element={ <TutorialdPage />} />
       <Route path='tutoriale' element={ <TutorialePage />} />
       <Route path='questionaire' element={ <QuestionairePage />} />
+      <Route path='questionaireb' element={ <QuestionairebPage />} />
+      <Route path='questionairec' element={ <QuestionairecPage />} />
+      <Route path='questionaired' element={ <QuestionairedPage />} />
     </Routes>
   </BrowserRouter>
   );

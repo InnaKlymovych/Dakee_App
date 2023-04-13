@@ -2,7 +2,7 @@ import React from 'react';
 import {MouseEvent} from 'react';
 import back from '../images/icons/back.svg';
 import logo_small from '../images/icons/logo_small.png';
-import plane from '../images/icons/Vector.png';
+import traveller from '../images/icons/traveller.png';
 import local from '../images/icons/local.png';
 
 export interface IQuestionairePageProps {};
@@ -25,10 +25,10 @@ const QuestionairePage: React.FunctionComponent<IQuestionairePageProps> = props 
       <h2>1/5</h2>
       <p>I am a:</p>
       <div className="questionaire_button">
-         <button className='button_left' >
-            <img src={plane} alt="plane" />
+         <button className='buttons' >
+            <img src={traveller} alt="traveller" />
          </button>
-         <button className='button_right' >
+         <button className='buttons' >
             <img src={local} alt="local" />
          </button>
       </div>
