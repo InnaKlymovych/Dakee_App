@@ -23,28 +23,29 @@ const QuestionairedPage: React.FunctionComponent<IQuestionairedPageProps> = prop
          
       </div>
       <h2>4/5</h2>
-      
-      <form>
-      <p>I currently live in:</p>
-         <div className="input_mail">
-         
-            <input
-            name='email'
-            placeholder="E-mail" 
-            id="email"
-            type="email"/>
-         </div>
-      <p>I can give advices for:</p>
-         <div className="input_password">
+      <div className="questionaire_box">
+         <form>
+         <p>I currently live in:</p>
+            <div className="live_in">
             
-            <input
-            placeholder="Password"
-            name="password"
-            id="password"
-            type="password"/>
-
-         </div>
-      </form>
+               <input
+               name='live_in'
+               placeholder="City, Country" 
+               id="live_in"
+               type="name"/>
+            </div>
+         <p>I can give advices for:</p>
+            <div className="advices_for">
+               
+               <input
+               placeholder="City, Country"
+               name="name"
+               id="advices_for"
+               type="name"/>
+   
+            </div>
+         </form>
+      </div>
       <a href="questionairee">Next {simble} </a>
    </div>
    );

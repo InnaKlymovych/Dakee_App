@@ -318,6 +318,47 @@ a{
   text-align: center;
 }
 
+/*QUESTIONAIRE_BOX*/
+
+.questionaire_box {
+  
+  padding: 40px;
+  height: 320px;
+  box-sizing: border-box;
+  
+}
+
+.live_in input, .advices_for input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.questionaire_box>form>p{
+  text-align: left;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+.questionaired>a{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 
 
 
