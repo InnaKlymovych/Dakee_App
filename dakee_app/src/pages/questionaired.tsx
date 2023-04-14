@@ -27,7 +27,7 @@ const QuestionairedPage: React.FunctionComponent<IQuestionairedPageProps> = prop
          <form>
          <p>I currently live in:</p>
             <div className="live_in">
-            
+
                <input
                name='live_in'
                placeholder="City, Country" 
@@ -36,14 +36,16 @@ const QuestionairedPage: React.FunctionComponent<IQuestionairedPageProps> = prop
             </div>
          <p>I can give advices for:</p>
             <div className="advices_for">
-               
+
                <input
                placeholder="City, Country"
                name="name"
                id="advices_for"
                type="name"/>
-   
+
             </div>
+
+            <button className='questionaire_box_button'> + Add another place</button>
          </form>
       </div>
       <a href="questionairee">Next {simble} </a>

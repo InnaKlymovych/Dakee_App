@@ -19,8 +19,8 @@
 }
 
 #root{
-  width: 375px;
-  height: 820px;
+  width: 390px;
+  min-height: 844px;
   background: var(--primary);
   
 }
@@ -350,6 +350,16 @@ a{
 
 .questionaired>a{
   text-align: center;
+}
+
+.questionaire_box_button{
+  border-color: transparent;
+  color: var(--pink-light);
+}
+
+.questionairee_button{
+  width: 279px;
+  height: 717px;
 }
 
 
