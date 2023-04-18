@@ -362,8 +362,40 @@ a{
   height: 717px;
 }
 
+/*LOCAL_SEARCH*/
+
+.submit_search{
+  border: none;
+}
+
+.filter_search{
+  border:none;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  
+
+}
+
+.card{
+  width: 281px;
+  height: 332px;
+  background-color: var(--white);
+  border-radius: 26px;
+  margin-top: 24px;
+}
 
 
+/*FILTER*/
+
+#filter{
+  background-color: var(--white);
+}
 
 
 
