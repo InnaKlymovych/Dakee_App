@@ -7,6 +7,12 @@
 
 }
 
+body , html{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -19,10 +25,9 @@
 }
 
 #root{
-  width: 390px;
-  min-height: 844px;
+
   background: var(--primary);
-  
+  flex: 1;
 }
 
 /*HOME PAGE*/
@@ -41,7 +46,7 @@ align-content: center;
   
   width: 202px;
   height: 78px;
-  top: 367px;
+  
   
 }
 
@@ -69,7 +74,7 @@ p{
 
 
 #login{
-  top: 367px;
+  
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -80,7 +85,7 @@ p{
 }
 
 .logo_login{
-  margin-top: 110px;
+  
   width: 202px;
   height: 80px;
 }
@@ -88,17 +93,14 @@ p{
 .login_text1{
   height: 88px;
   width: 242px;
-  left: 50px;
-  top: 274px;
-  border-radius: nullpx;
+  
+
 
 }
-h2 , h4{
-  color: var(--white);
-}
+
 
 h2{
-  
+  color: var(--white);
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -109,6 +111,7 @@ h2{
 }
 
 h4{
+  color: var(--white);
   text-align: center;
   font-family: 'Inter';
   font-style: normal;
@@ -145,7 +148,7 @@ button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 367px;
+  
   justify-content: space-around;
   align-content: center;
   
@@ -162,7 +165,7 @@ button{
   font-weight:700;
   font-size: 36px;
   line-height: 43.57px;
-  margin-left: -100px;
+
 }
 
 .back>button{
@@ -259,9 +262,20 @@ a{
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  align-content: center;
+  
+}
+
+#tutorial_friends>.logo_small{
+  top: 36px;
+  right: 20px;
+  width: 70px;
+  height: 46px;
+
+}
+
+.friends{
+  height: 86px;
+  width: 86px;
 }
 
 .tutorial_box{
@@ -395,6 +409,20 @@ a{
 
 #filter{
   background-color: var(--white);
+  color: var(--pink-dark);
+}
+
+.filter_search{
+  color: var(--pink-dark);
+}
+
+.gender{
+  display: flex;
+  flex-direction: row;
+  left:0;
+}
+.gender>button{
+  color: var(--pink-dark);
 }
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {MouseEvent} from 'react';
-import logo_img from '../images/logo_login.png';
+import logo_img from '../images/logo.svg';
 
 
 export interface ILoginPageProps {};
