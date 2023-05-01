@@ -14,41 +14,38 @@ const QuestionairedPage: React.FunctionComponent<IQuestionairedPageProps> = prop
    }
    return (
    <div className='questionaired' >
-      <div className="tutorial_back">
-         <button className='tutorial_back_button' onClick={buttonHandler}>
-            <img src={back} alt="back" />
-         </button>
+      <button className='tutorial_back_button' onClick={buttonHandler}>
+         <img src={back} alt="back" />
+      </button>
+      <img src={logo_small} alt="logo" className='logo_small'/>
          
-            <img src={logo_small} alt="logo" />
-         
-      </div>
-      <h2>4/5</h2>
       <div className="questionaire_box">
+         <h2>3/4</h2>
          <form>
-         <p>I currently live in:</p>
+            
             <div className="live_in">
-
+               <label htmlFor="">I currently live in:</label>
                <input
-               name='live_in'
-               placeholder="City, Country" 
-               id="live_in"
-               type="name"/>
+                  name='live_in'
+                  placeholder="City, Country" 
+                  id="live_in"
+                  type="name"/>
             </div>
-         <p>I can give advices for:</p>
+            
             <div className="advices_for">
-
+               <label htmlFor="">I can give advices for:</label>
                <input
-               placeholder="City, Country"
-               name="name"
-               id="advices_for"
-               type="name"/>
-
+                  placeholder="City, Country"
+                  name="name"
+                  id="advices_for"
+                  type="name"/>
             </div>
 
-            <button className='questionaire_box_button'> + Add another place</button>
          </form>
+         <button className='questionaired_box_button'> + Add another place</button>   
+         <a href="questionairee">Next {simble} </a>
       </div>
-      <a href="questionairee">Next {simble} </a>
+      
    </div>
    );
 }

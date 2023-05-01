@@ -16,6 +16,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = props => {
       <div onClick={handleClick} id="body_logo">
          <div className="logo">
             <img src={logo_img} alt="img_logo" />
+            <p>Live it like the Locals</p>
          </div>
          <div className="logo_text">
             <p>Tap anywhere <br /> to continue</p>

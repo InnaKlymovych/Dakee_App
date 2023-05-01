@@ -19,21 +19,22 @@ const TutorialdPage: React.FunctionComponent<ITutorialdPageProps> = props => {
    }
    return (
    <div className='happy' id='happy' >
-      <div className="tutorial_back">
          <button className='tutorial_back_button' onClick={buttonHandler1}>
             <img src={back} alt="back" />
          </button>
-         <img src={logo_small} alt="logo" />
-      </div>
+         <img src={logo_small} alt="logo" className='logo_small' />
+      
       <div className="tutorial_d_box">
-         <div className="tutorial_d_text1">
-            <h2>Be both!</h2>
-         </div>
+         <h2>Congrats,
+            <br /> 
+            you´re both!</h2>
          <img src={happy} alt="happy_face" />
          <div className="tutorial_d_text2">
             <p>As a Dakee user, you can choose to be both Traveller and Local. 
-            Gain discounts by giving advices to visitors and get the unforgettable local experience
-            while travelling!
+               <br />
+               <br />
+               Gain discounts by giving advices to visitors and get the unforgettable local experience
+               while travelling!
             </p>
          </div>
          <div className="done">

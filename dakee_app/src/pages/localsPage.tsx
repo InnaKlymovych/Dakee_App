@@ -1,7 +1,7 @@
 import React from 'react';
 import logo_small from '../images/icons/logo_small.png';
 import filter from '../images/icons/filter.png';
-import big_lupa from '../images/icons/Lupa.png';
+import big_lupa from '../images/icons/Lupa.svg';
 import {MouseEvent} from 'react';
 
 
@@ -9,6 +9,7 @@ export interface ILocalPageProps {};
 
 
 const simble3 = ">";
+
 const LocalPage: React.FunctionComponent<ILocalPageProps> = props => {
    
    const buttonHandler = (event: MouseEvent) => {
@@ -21,22 +22,22 @@ const LocalPage: React.FunctionComponent<ILocalPageProps> = props => {
    return (
    <div className='local' >
       
-      <img src={logo_small} alt="logo" />
-      
+      <img src={logo_small} alt="logo" className='logo_small'  />
+   <div className="local_box">   
       <h2>Find the Local!</h2>
       <form >
-         <input type="text" placeholder=' Choose a city...' />
+         <input type="text" placeholder= 'Choose a city...' />
 
          <button className='filter_search' onClick={buttonHandler1}>
-            <img src={filter} alt="filter" />
-            Filters Search {simble3}
+            <p><img src={filter} alt="filter" />Filters <br /> Search {simble3}</p> 
          </button>
-         <button className='submit_search' onClick={buttonHandler}  >
-            <img src={big_lupa} alt="lupa" />
-         </button>
+         
       </form>
+      <button className='submit_search' onClick={buttonHandler}  >
+         <img src={big_lupa} alt="lupa" />
+      </button>
       <p>Choose a city <br />to search for the Locals!</p>
-   
+      </div>
    </div>
    );
 }

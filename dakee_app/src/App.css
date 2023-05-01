@@ -33,19 +33,19 @@ body , html{
 /*HOME PAGE*/
 
 #body_logo{
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-align-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
 }
 
 
 .logo {
-  
+  margin-top: 30vh;
   width: 202px;
-  height: 78px;
+  
   
   
 }
@@ -74,8 +74,8 @@ p{
 
 
 #login{
-  
-  height: 100%;
+  margin-top: 100px;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,18 +95,19 @@ p{
   width: 242px;
   
 
-
 }
 
 
 h2{
+  
+  margin-left: -30px;
   color: var(--white);
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
-  text-align: left;
+  
 
 }
 
@@ -122,7 +123,7 @@ h4{
 }
 
 .login_text2{
-  margin-top: -120px;
+  margin-top: -40px;
 }
 
 button{
@@ -136,19 +137,26 @@ button{
   color: var(--white);
 }
 
-.login_text3{
-  margin-top:-100px;
+.sign_up .log_in{
+  border: none;
+  color: var(--pink-light);
+}
+
+.sign_up{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 /*SIGN UP*/
 
 .signup{
 
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   justify-content: space-around;
   align-content: center;
   
@@ -161,6 +169,7 @@ button{
 }
 
 .signup>h3{
+  margin-left: -30px;
   color: var(--white);
   font-weight:700;
   font-size: 36px;
@@ -174,7 +183,6 @@ button{
 
 .login-box {
   
-
   padding: 40px;
   height: 320px;
   box-sizing: border-box;
@@ -259,29 +267,68 @@ a{
 /*TUTORIAL*/
 
 #tutorial_friends{
+  margin: 0 20px 0;
   height: 100%;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
 }
 
 #tutorial_friends>.logo_small{
+  left:80vw;
   top: 36px;
-  right: 20px;
   width: 70px;
   height: 46px;
-
+  position: fixed;
 }
 
 .friends{
   height: 86px;
   width: 86px;
+  justify-content: center;
 }
 
 .tutorial_box{
+  margin-top:100px;
+  margin-left:0px;
+  height: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  
 }
+
+.tutorial_box p{
+  text-align: left;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 20px;
+
+}
+
+.ellipse{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ellipse img{
+  margin-left: 14px;
+  width: 9px;
+}
+
+.scip{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 
 .tutorial_up{
   height: 100%;
@@ -294,23 +341,264 @@ a{
 
 /*TUTORIAL_B*/
 
+#tutorial_main{
+  margin: 0 20px 20px 0x;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+  
+}
+
+#tutorial_main>.logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
 
 .tutorial_back_button{
+  position : absolute;
+  top: 36px;
+  left: 20px;
   width: 11px;
   height: 23px;
   margin-bottom: 10px;
   border:transparent;
 }
 
+.tutorial_plane{
+  
+  margin-top: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  box-sizing: border-box;
+}
+
+.tutorial_main h2{
+  margin-top: 20px;
+  text-align: left;
+  
+}
+
+.plane{
+  height: 86px;
+  width: 86px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.tutorial_b_text2{
+
+  margin-left: 0px 38px 0px 50px;
+  text-align: left;
+}
+
+.tutorial_b_text2 p{
+  text-align: left;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0px 20px 0px 50px;
+
+}
+
+
+
+/*TUTORIALC*/
+
+.tutorialc_main{
+  margin: 0 20px 20px 0x;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+  
+}
+
+.tutorialc_main .logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+.tutorial_up{
+  
+  margin-top: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  box-sizing: border-box;
+}
+
+.tutorial_c_text2{
+
+  text-align: left;
+}
+
+.tutorial_c_text2 p{
+  text-align: left;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0px 20px 0px 50px;
+
+}
+
+
+/*TUTORIALD*/
+
+.happy{
+  margin: 0 20px 20px 0x;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+
+}
+
+.happy .logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+.tutorial_d_box{
+  
+  margin-top: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  box-sizing: border-box;
+}
+
+.tutorial_d_text2{
+
+  text-align: left;
+}
+
+.tutorial_d_text2 p{
+  text-align: left;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0px 20px 0px 50px;
+
+}
+
+/*TUTORIALE*/
+
+.tutoriale{
+  margin: 0 20px 20px 0x;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+
+}
+
+.tutoriale .logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+.tutorial_e_box{
+  
+  margin-top: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  box-sizing: border-box;
+}
+
+.tutorial_e_box h2{
+  margin-left: 50px;
+}
+
+.tutorial_e_box p{
+  margin: 10px 0px 30px -80px;
+  
+}
 
 
 /*QUESTIONAIRE*/
 
+.questionaire{
+  margin: 0 20px 20px 0x;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+}
+
+.questionaire .logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+
+
+.questionaire_box h2{
+  margin-left: -200px;
+  margin-bottom: 30px;
+}
+
+.questionaire_box p{
+  margin-left: -200px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+
 .questionaire_button{
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
-
 
 
 .buttons{
@@ -318,29 +606,87 @@ a{
   height: 133px;
   border-radius: 20px;
   border: transparent;
+  margin: 10px;
+}
+
+
+
+a{
+  margin-top: 50px;
+  color: var(--pink-light);
+  cursor: pointer;
+  text-align: center;
+}
+
+/*QUESTIONAIREB & QUESTIONAIREC*/
+
+.questionaireb , .questionairec , .questionaired , .questionairef{
+  margin: 0 20px 20px 0x;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+}
+
+.questionaireb .logo_small , .questionairec .logo_small , .questionaired .logo_small , .questionairee .logo_small , .questionairef .logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+.questionaire_box{
+  
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  box-sizing: border-box;
+  padding: 0px 40px 0px 40px;
+  height: 320px;
+  box-sizing: border-box;
+  
+}
+
+.questionaire_box h2{
+  margin-left: -200px;
+
+}
+
+.questionaire_box p{
+  margin-left: -200px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.questionaireb_button{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
 }
 
 .buttons_text{
   width: 133px;
   height: 133px;
   border-radius: 20px;
+  margin: 10px;
 }
 
-a{
-  color: var(--pink-light);
-  cursor: pointer;
-  text-align: center;
+/*QUESTIONAIRED*/
+
+.questionaired>.questionaire_box h2{
+  margin-bottom: 20px;
 }
 
-/*QUESTIONAIRE_BOX*/
-
-.questionaire_box {
-  
-  padding: 40px;
-  height: 320px;
-  box-sizing: border-box;
-  
-}
 
 .live_in input, .advices_for input{
   width: 100%;
@@ -354,8 +700,8 @@ a{
   background: transparent;
 }
 
-.questionaire_box>form>p{
-  text-align: left;
+.live_in>label , .advices_for>label{
+  
   color: var(--white);
   font-weight: 700;
   font-size: 16px;
@@ -366,15 +712,144 @@ a{
   text-align: center;
 }
 
-.questionaire_box_button{
+.questionaired_box_button{
+  width: auto;
+  align-self:flex-end;
   border-color: transparent;
   color: var(--pink-light);
+  padding: 0;
 }
 
-.questionairee_button{
-  width: 279px;
-  height: 717px;
+
+/*QUESTIONAIREE !!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.questionairee{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
+
+
+.questionairee_button{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  justify-self: center;
+  height: auto;
+
+
+
+}
+
+.questionairee_box>h2{
+
+text-align: auto;
+}
+
+.questionairee_box{
+  margin-top: 200px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  box-sizing: border-box;
+  padding: 0px 40px 0px 40px;
+  
+  
+}
+
+.questionairee>.done{
+  
+  margin-bottom: 10px;
+}
+
+/*QUESTIONAIREF*/
+
+.questionairef_box{
+  
+  width: 279px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  
+
+}
+
+.questionairef_box>h2{
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+
+.questionairef_box>.done{
+  margin: 0 auto;
+}
+
+/*LOCALS PAGE*/
+
+.local{
+  margin-top: 100px;
+  height: 80%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.local>.logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+.local_box{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+
+.local_box>h2{
+  margin-top: 20px;
+  
+}
+
+.local_box>button{
+  width: 116px;
+  height: 116px;
+}
+
+.local_box>form{
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.local_box>form>input{
+  border-radius: 20px;
+  border: 2px solid #fff;
+  color: white;
+  background: none;
+  height: 36px;
+  padding-right: 115px;
+  margin-top: 20px;
+}
+
+
 
 /*LOCAL_SEARCH*/
 

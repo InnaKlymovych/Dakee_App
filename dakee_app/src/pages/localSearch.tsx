@@ -14,13 +14,11 @@ const LocalSearch: React.FunctionComponent<ILocalSearchProps> = props => {
    }
    
    return (
-   <div className='local' >
-      <div className="tutorial_back">
+   <div className='local_b' >
          <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
             <img src={logo_small} alt="logo" />
-      </div>
       
       <h2>Results:</h2>
    

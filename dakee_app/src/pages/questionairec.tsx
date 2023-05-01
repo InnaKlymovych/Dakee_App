@@ -17,31 +17,29 @@ const QuestionairecPage: React.FunctionComponent<IQuestionairecPageProps> = prop
    }
    return (
    <div className='questionairec' >
-      <div className="tutorial_back">
-         <button className='tutorial_back_button' onClick={buttonHandler}>
-            <img src={back} alt="back" />
-         </button>
-         
-            <img src={logo_small} alt="logo" />
-         
+      <button className='tutorial_back_button' onClick={buttonHandler}>
+         <img src={back} alt="back" />
+      </button>
+      <img src={logo_small} alt="logo" className='logo_small' />
+      <div className="questionaire_box">   
+         <h2>2/4</h2>
+         <p>Gender:</p>
+         <div className="questionairec_button">
+            <button className='buttons' >
+               <img src={female} alt="female" />
+            </button>
+            <button className='buttons' >
+               <img src={male} alt="male" />
+            </button>
+            <button className='buttons' >
+               <img src={uvicorn} alt="uvicorn" />
+            </button>
+            <button className='buttons' >
+               <img src={prefer_not_to_say} alt="prefer_not_to_say" />
+            </button>
+         </div>
+         <a href="questionaired">Next {simble} </a>
       </div>
-      <h2>3/5</h2>
-      <p>Gender:</p>
-      <div className="questionairec_button">
-         <button className='buttons' >
-            <img src={female} alt="female" />
-         </button>
-         <button className='buttons' >
-            <img src={male} alt="male" />
-         </button>
-         <button className='buttons' >
-            <img src={uvicorn} alt="uvicorn" />
-         </button>
-         <button className='buttons' >
-            <img src={prefer_not_to_say} alt="prefer_not_to_say" />
-         </button>
-      </div>
-      <a href="questionaired">Next {simble} </a>
    </div>
    );
 }

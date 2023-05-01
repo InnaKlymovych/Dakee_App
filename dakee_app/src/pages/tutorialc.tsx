@@ -17,21 +17,21 @@ const TutorialcPage: React.FunctionComponent<ITutorialcPageProps> = props => {
       window.location.href="tutorialb"
    }
    return (
-      <div className="tutorialb_main">
+      <div className="tutorialc_main">
          <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
+         <img src={logo_small} alt="logo" className='logo_small' />
          <div onClick={handleClick} className='tutorial_up' id='tutorial_up' >
-            <div className="tutorial_back">
-               <img src={logo_small} alt="logo" />
-            </div>
-            <div className="tutorial_c_box">
-               <div className="tutorial_c_text1">
-                  <h2>Who is a Local?</h2>
-               </div>
-               <img src={vectorUp} alt="vectorUp" />
+               
+            <h2>Who is <br /> a Local?</h2>
+            <img src={vectorUp} alt="vectorUp" />
                <div className="tutorial_c_text2">
                   <p>A Local is a person who lives in a city and wants to give some tips to visitors. 
+                  
+                  <br />
+                  <br />
+                  
                   He or she recieves later avaliations from the Travellers. Each avaliation has a point 
                   value that can be exchanges for many rewards and discounts from our Partners.
                   </p>
@@ -42,11 +42,9 @@ const TutorialcPage: React.FunctionComponent<ITutorialcPageProps> = props => {
                   <img src={ellipse1} alt="ellipse1" />
                   <img src={ellipse2} alt="ellipse2" />
                </div>
-               <p>Scip the tutorial</p>
+               <p className='scip' >Scip the tutorial</p>
             </div>
 
-
-         </div>
    </div>
    );
 }

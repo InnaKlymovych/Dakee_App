@@ -8,7 +8,7 @@ export interface ITutorialePageProps {};
 const TutorialePage: React.FunctionComponent<ITutorialePageProps> = props => {
 
    const buttonHandler = (event: MouseEvent) => {
-      window.location.href="questionaire"
+      window.location.href="questionaireb"
    }
 
    const buttonHandler1 = (event: MouseEvent) => {
@@ -16,20 +16,19 @@ const TutorialePage: React.FunctionComponent<ITutorialePageProps> = props => {
    }
 
    return (
-   <div className='happy' id='happy' >
-      <div className="tutorial_back">
-         <button className='tutorial_back_button'  onClick={buttonHandler1}>
-            <img src={back} alt="back" />
-         </button>
-         <img src={logo_small} alt="logo" />
-      </div>
+   <div className='tutoriale' id='tutoriale' >
+      
+      <button className='tutorial_back_button'  onClick={buttonHandler1}>
+         <img src={back} alt="back" />
+      </button>
+      <img src={logo_small} alt="logo" className='logo_small' />
+      
       <div className="tutorial_e_box">
-         <div className="tutorial_e_text1">
-            <h2>Done !<br /><br /> Let us ask five quick questions before we start. </h2>
-         </div>
-         <div className="tutorial_d_text2">
-            <p>You can edit your anwsers later.</p>
-         </div>
+         
+         <h2> Done !<br /><br /> Let us ask five quick questions before we start. </h2>
+         
+         <p> You can edit your anwsers later.</p>
+         
          <div className="done">
             <button onClick={buttonHandler} className='done' id='done' >Ok</button>
          </div>   

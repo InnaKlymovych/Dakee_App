@@ -10,19 +10,17 @@ const simble2 = "<";
 
 const QuestionairebPage: React.FunctionComponent<IQuestionairebPageProps> = props => {
    const buttonHandler = (event: MouseEvent) => {
-      window.location.href="questionaire"
+      window.location.href="tutoriale"
    }
    return (
    <div className='questionaireb' >
-      <div className="tutorial_back">
          <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
+         <img src={logo_small} alt="logo" className='logo_small' />
          
-            <img src={logo_small} alt="logo" />
-         
-      </div>
-      <h2>2/5</h2>
+      <div className="questionaire_box">
+      <h2>1/4</h2>
       <p>Age:</p>
       <div className="questionaireb_button">
          <button className='buttons_text' >
@@ -39,6 +37,7 @@ const QuestionairebPage: React.FunctionComponent<IQuestionairebPageProps> = prop
          </button>
       </div>
       <a href="questionairec">Next {simble} </a>
+   </div>
    </div>
    );
 }

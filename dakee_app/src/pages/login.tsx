@@ -13,7 +13,9 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = props => {
       window.location.href="signup"
    }
 
-   
+   const buttonHandler1 = (event: MouseEvent) => {
+      window.location.href="loginb"
+   }
 
    return (
       <div id="login">
@@ -29,10 +31,9 @@ const LoginPage: React.FunctionComponent<ILoginPageProps> = props => {
          </div>
          <div className="sign_up">
             <button onClick={buttonHandler} className='sign_up' id='sign_up' >Sign up</button>
+            <button onClick={buttonHandler1} className='log_in' id='log_in' >Log In</button>
          </div>
-         <div className="login_text3">
-            <h4>Log In</h4>
-         </div>
+      
       </div>
    );
 }
