@@ -135,6 +135,7 @@ button{
   border: solid 2px var(--white);
   background-color: transparent;
   color: var(--white);
+  cursor: pointer;
 }
 
 .sign_up .log_in{
@@ -852,6 +853,57 @@ text-align: auto;
 
 
 /*LOCAL_SEARCH*/
+.local_b{
+  margin-top: 100px;
+  height: 80%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.local_b>.logo_small{
+
+  left:80vw;
+  top: 36px;
+  width: 70px;
+  height: 46px;
+  position: fixed;
+}
+
+.local_box{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+
+.localb_box>h2{
+  margin: 20px 0 20px 20px;
+  
+}
+
+.localb_box>form{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.localb_box>form>input{
+  border-radius: 20px;
+  border: 2px solid #fff;
+  color: white;
+  background: none;
+  height: 36px;
+  padding-right: 115px;
+  margin-top: 20px;
+}
+
+
 
 .submit_search{
   border: none;
@@ -859,31 +911,61 @@ text-align: auto;
 
 .filter_search{
   border:none;
-}
-
-.cards{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
   
-
 }
 
-.card{
-  width: 281px;
-  height: 332px;
-  background-color: var(--white);
-  border-radius: 26px;
-  margin-top: 24px;
+
+.localb_search{
+  border: none;
+  margin-left: 40%;
 }
+
+
 
 
 /*FILTER*/
 
 #filter{
   background-color: var(--white);
+  color: var(--orange);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.filter_box{
+  
+  
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-around;
+  box-sizing: border-box;
+  padding: 0px 90px 0px 90px;
+  
+  
+}
+
+
+
+
+.filter_box>h2{
+  color: var(--orange);
+  margin: 0 0 10px 2px;
+  font-size: 16px;
+  font-weight: 700;
+  
+}
+
+.filter_box>p{
+  margin-top: 20px;
+  font-weight: 700;
   color: var(--pink-dark);
 }
 
@@ -892,19 +974,152 @@ text-align: auto;
 }
 
 .gender{
+  margin-left: -10px;
   display: flex;
+  width: 100%;
   flex-direction: row;
-  left:0;
+  justify-content: flex-start;
+  
 }
 .gender>button{
+  width: 45px;
   color: var(--pink-dark);
+  font-weight: 400;
+}
+
+.range{
+  color: var(--pink-dark);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 237px;
+  margin-top: 5px;
+}
+
+.filter_box>input {
+  margin-top: 10px;
+  
+  width:237px;
+  height:2px;
+  background:var(--pink-dark);
+  border:none;
+  outline:none;
+}
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  height:5px;
+  width:100%;
+  cursor: pointer;
+  background: var(--orange);
+  margin-bottom: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid var(--orange);
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+.advices{
+  
+  width: 237px;
+  display: flex;
+  flex-direction: row;
+  margin-left: -5px;
+}
+
+.advices>button{
+  height: 25px;
+  color:var(--orange);
+  
+}
+
+.advices>.art>img{
+  padding-left:-30px;
 }
 
 
+.stars>img{
+  margin: 10px 5px 0 0;
+}
+
+
+/*CARDS*/
 
 
 
+.cards{
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  height: 332px;
+  width: 281px;
+  border-radius: 26px;
+  background-color: var(--white);
 
+}
 
+.cards>.user_name{
+  border-top-right-radius: 26px;
+  border-top-left-radius: 26px;
+  padding: 20px 20px;
+  height: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--pink-dark);
+  background-color: var(--white);
+}
+
+.cards>.user_name>p{
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.user_photo{
+  background-repeat: no-repeat;
+}
+
+.cards_advices{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 60px;
+  
+}
+
+.cards_advices>button{
+  cursor: pointer;
+  border: none;
+  color: var(--orange);
+  width: 70px;
+  height: 60px;
+
+}
+
+.add_for{
+  border: none;
+  width: 100px;
+  height: 15px;
+  color: var(--orange);
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  
+}
 
 

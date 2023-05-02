@@ -13,16 +13,21 @@ const simble3 = ">";
 const LocalPage: React.FunctionComponent<ILocalPageProps> = props => {
    
    const buttonHandler = (event: MouseEvent) => {
+      
       window.location.href="localSearch"
    }
 
    const buttonHandler1 = (event: MouseEvent) => {
       window.location.href="filter"
    }
+
+   const buttonHandler2 = (event: MouseEvent) => {
+      window.location.href="menu"
+   }
    return (
    <div className='local' >
       
-      <img src={logo_small} alt="logo" className='logo_small'  />
+      <img src={logo_small} alt="logo" className='logo_small' onClick={buttonHandler2} />
    <div className="local_box">   
       <h2>Find the Local!</h2>
       <form >

@@ -18,7 +18,7 @@ import QuestionairefPage from './pages/questionairef';
 import LocalPage from './pages/localsPage';
 import LocalSearch from './pages/localSearch';
 import Filter from './pages/filter';
-
+import Menu from './pages/menu';
 
 
 
@@ -46,7 +46,7 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='localsPage' element={ <LocalPage />} />
       <Route path='localSearch' element={ <LocalSearch />} />
       <Route path='filter' element={ <Filter />} />
-      
+      <Route path='menu' element={ <Menu />} />
     </Routes>
   </BrowserRouter>
   );

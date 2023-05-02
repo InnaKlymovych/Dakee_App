@@ -16,8 +16,8 @@ const LoginbPage: React.FunctionComponent<ILoginbPageProps> = props => {
       window.location.href="login"
    }
 
-   const buttonHandler = (event: MouseEvent) => {
-      window.location.href="menu"
+   const buttonHandler1 = (event: MouseEvent) => {
+      window.location.href="localsPage"
    }
 
    return (
@@ -57,7 +57,7 @@ const LoginbPage: React.FunctionComponent<ILoginbPageProps> = props => {
          </div>
 
          
-         <button onClick={buttonHandler} className='log_in' id='log_in' >Log in</button>
+         <button onClick={buttonHandler1} className='log_in' id='log_in' >Log in</button>
       </form>
       </div>
 
