@@ -805,12 +805,32 @@ text-align: auto;
 }
 
 .local>.logo_small{
-
+  position: relative;
   left:80vw;
   top: 36px;
-  width: 70px;
-  height: 46px;
+  width: 100px;
+  height: 70px;
   position: fixed;
+}
+
+.local>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+.local>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
 }
 
 .local_box{
@@ -863,12 +883,32 @@ text-align: auto;
 }
 
 .local_b>.logo_small{
-
+  position: relative;
   left:80vw;
   top: 36px;
-  width: 70px;
-  height: 46px;
+  width: 100px;
+  height: 70px;
   position: fixed;
+}
+
+.local_b>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+.local_b>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
 }
 
 .local_box{
@@ -921,8 +961,6 @@ text-align: auto;
 }
 
 
-
-
 /*FILTER*/
 
 #filter{
@@ -951,8 +989,6 @@ text-align: auto;
   
   
 }
-
-
 
 
 .filter_box>h2{
@@ -1123,3 +1159,296 @@ input[type=range]:focus {
 }
 
 
+/*MENU*/
+
+#menu {
+  background-color: var(--white);
+  color: var(--orange);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  
+  
+}
+
+.menu_box{
+  height: 40vh;
+  margin: 100px 0 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu_box>h2{
+  margin-left: 10px;
+  color: var(--orange);
+  font-size: 36px;
+}
+
+.menu_box>ul{
+  margin-left: 10px;
+  list-style: none;
+}
+
+.menu_box>ul>li{
+  margin-top:30px;
+}
+
+.menu_box>ul>li>a{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu_box>ul>li>.chat{
+  position: relative;
+}
+
+.chat>.circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: -20% ;
+  left: 120%;
+  background-color: var(--pink-dark);
+}
+
+.circle>p{
+  font-size: 16px;
+  color: var(--white);
+  text-align: center;
+  margin-top: 3px;
+  width: 25px;
+  height: 25px;
+}
+
+/*CHAT*/
+
+#chat {
+  background-color: var(--white);
+  color: var(--orange);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  
+  
+}
+
+#chat>.logo_small{
+  position: relative;
+  left:80vw;
+  top: 36px;
+  width: 100px;
+  height: 70px;
+  position: fixed;
+}
+
+#chat>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+#chat>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
+}
+
+.chat_box{
+  
+  margin: 100px 0 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chat_box>h2{
+  margin-left: 10px;
+  color: var(--orange);
+  font-size: 36px;
+}
+
+.chat_box_buttons>button{
+  color: var(--orange);
+  width: 80px;
+  height: 60px;
+}
+
+.chat_box>hr{
+  color:var(--pink-dark);
+  border-top: 1px solid red;
+  width: 290px;
+}
+
+/*CHAT_COMPONENT*/
+
+.chat_component{
+  width: 291px;
+  height: 53px;
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat_component>.image{
+  width: 53px;
+  height: 53px;
+  border-radius:50%;
+  background-color: aliceblue;
+  position: absolute;
+  margin-left: 0;
+
+}
+
+.chat_component>.content{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--orange);
+  background-color: var(--white);
+  width: 230px;
+  display: block;
+  margin-left: 61px;
+
+}
+
+.autor{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+}
+
+.name>p{
+  font-weight: 600;
+}
+.and{
+  margin: 0 4px 0 4px;
+}
+
+.message>p{
+  font-size: 12px;
+  text-align: start;
+  font-weight: 700;
+}
+
+/*CHAT_MESSAGES*/
+
+#chat_messages {
+  background-color: var(--white);
+  color: var(--orange);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  
+  
+}
+
+#chat_messages>.logo_small{
+  position: relative;
+  left:80vw;
+  top: 36px;
+  width: 100px;
+  height: 70px;
+  position: fixed;
+}
+
+#chat_messages>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+#chat_messages>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
+}
+
+.chat_messages_box{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px ;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.chat_messages_box>.friend{
+  width: 288px;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #619bb3;
+}
+
+.friend>.friend_photo{
+  width: 53px;
+  height: 100%;
+  background-color: burlywood;
+}
+
+.friend>.friend_photo>img{
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+}
+
+.friend>.friend_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 235px;
+}
+
+.friend>.friend_info>h2{
+  color: var(--orange);
+
+}
+
+.chating>input{
+  display: block;
+  margin-bottom: 84px;
+  border-radius: 20px;
+  border: 2px solid var(--orange);
+  color: white;
+  background: none;
+  height: 36px;
+  padding-right: 115px;
+  margin-top: 20px;
+}

@@ -4,6 +4,7 @@ import art from '../images/icons/art-red.svg';
 import food from '../images/icons/food-red.svg';
 import music from '../images/icons/music-red.svg';
 import photo from '../images/photo1.jpg';
+
 export const Card = () => {
 const simble = ">";
 

@@ -16,19 +16,28 @@ const LocalSearch: React.FunctionComponent<ILocalSearchProps> = props => {
    const buttonHandler1 = (event: MouseEvent) => {
       window.location.href="menu"
    }
+   const buttonHandler2 = (event: MouseEvent) => {
+      window.location.href="filter"
+   }
    return (
    <div className='local_b' >
          <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
-         <img src={logo_small} alt="logo" className='logo_small' onClick={buttonHandler1}/>
+         <div className="logo_small">
+            <img src={logo_small} alt="logo" className='logo_small' onClick={buttonHandler1}/>
+            <div className="local_circle">
+               <p>2</p>
+            </div>
+         </div>
+         
    <div className="localb_box">   
       <h2>Results:</h2>
    
       <form>
          <input type="text" placeholder=' Choose a city...' />
 
-         <button className='localb_search' >
+         <button className='localb_search' onClick={buttonHandler2} >
             <img src={filter} alt="filter" />
             Filters Search {simble3}
          </button>

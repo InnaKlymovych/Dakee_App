@@ -1,7 +1,7 @@
 import React from 'react';
 import back_red from '../images/icons/back_red.png';
 import { MouseEvent } from 'react';
-import filter_red from '../images/icons/filter-red.png';
+
 
 
 export interface IMenuProps {};
@@ -22,10 +22,19 @@ const Menu: React.FunctionComponent<IMenuProps> = props => {
          </button>  
 
          <div className="menu_box">
-            <h2>
-               <img src={filter_red} alt="filter" />
-               Menu
-            </h2>
+            <h2>Menu</h2>
+            <ul>
+               
+               <li><a href="localsPage">Home</a></li>
+               <li>
+                  <a href="chat" className='chat' >
+                  Chat
+                  <div className="circle"><p>2</p></div>
+                  </a>
+               </li>
+               <li><a href="profile">My profile</a></li>
+               <li><a href="FAQ">FAQ</a></li>
+            </ul>
             
          </div>
       </div>

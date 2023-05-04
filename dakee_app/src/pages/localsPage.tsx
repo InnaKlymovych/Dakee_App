@@ -26,8 +26,13 @@ const LocalPage: React.FunctionComponent<ILocalPageProps> = props => {
    }
    return (
    <div className='local' >
+      <div className="logo_small">
+         <img src={logo_small} alt="logo" className='logo_small' onClick={buttonHandler2} />
+         <div className="local_circle">
+            <p>2</p>
+         </div>
+      </div>
       
-      <img src={logo_small} alt="logo" className='logo_small' onClick={buttonHandler2} />
    <div className="local_box">   
       <h2>Find the Local!</h2>
       <form >
