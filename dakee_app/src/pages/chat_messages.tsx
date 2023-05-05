@@ -42,7 +42,7 @@ var simble = ">";
                   <a href="friend_profile">See details {simble}</a>
                   <hr />
                   <p>Rate:</p>
-                  <div className="stars">
+                  <div className="friend_stars">
                      <img src={star_white} alt="star" />
                      <img src={star_white} alt="star" />
                      <img src={star_white} alt="star" />

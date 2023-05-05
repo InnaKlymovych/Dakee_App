@@ -1413,13 +1413,12 @@ input[type=range]:focus {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: #619bb3;
+  
 }
 
 .friend>.friend_photo{
   width: 53px;
-  height: 100%;
-  background-color: burlywood;
+  
 }
 
 .friend>.friend_photo>img{
@@ -1431,13 +1430,22 @@ input[type=range]:focus {
 .friend>.friend_info{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 235px;
+  margin-left: 30px;
 }
 
+.friend_info>a{
+  margin: 0;
+}
+
+.friend_info>p{
+  margin-bottom: 7px ;
+}
 .friend>.friend_info>h2{
   color: var(--orange);
+  margin-left: 0;
 
 }
 
@@ -1451,4 +1459,15 @@ input[type=range]:focus {
   height: 36px;
   padding-right: 115px;
   margin-top: 20px;
+}
+
+.friend_info>hr{
+  color:var(--pink-dark);
+  border-top: 1px solid var(--orange);
+  width: 115px;
+  margin: 7px 0;
+}
+
+.friend_stars>img{
+  margin-right: 6px;
 }
