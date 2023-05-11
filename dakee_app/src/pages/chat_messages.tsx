@@ -53,6 +53,7 @@ var simble = ">";
             </div>
             <div className="chating">
                <input className='chating_input' type="text" placeholder='Type something...' />
+               <input className='chat_buttom' type="button" />
             </div>
             
             

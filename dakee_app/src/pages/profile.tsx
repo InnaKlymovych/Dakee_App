@@ -2,8 +2,8 @@ import React from 'react';
 import back_red from '../images/icons/back_red.png';
 import { MouseEvent } from 'react';
 import logo_red from '../images/logo_red.svg';
-import photo from '../images/photo1.jpg';
-import red_star from '../images/icons/star.svg';
+import my_photo from '../images/icons/my_profile.svg';
+import red_star from '../images/preferences/Star-red.svg';
 
 
 export interface IProfileProps {};
@@ -34,8 +34,8 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
          <div className="my_profile_box">
             <h1>My profile</h1>
             <div className="my_profile_info">
-               <img src={photo} alt=""/>
-               <h2>My name</h2>
+               <img src={my_photo} alt=""/>
+               <h2>Inna</h2>
                <div className="my_stars">
                   <img src={red_star} alt="" />
                   <img src={red_star} alt="" />
@@ -45,9 +45,17 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
                </div>
                <div className="total_stars">
                   <p>Total</p>
+                  <img src={red_star} alt="red star" />
                </div>
             </div>
-            My profile
+            <div className="my_menu">
+               <ul>
+                  <li><a href="Get_rewards">Get rewards</a></li>
+                  <li><a href="Saved_rewards">Saved rewards</a></li>
+                  <li><a href="Edit_profile">Edit profile</a></li>
+                  <li><a href="Log_out">Log out</a></li>
+               </ul>
+            </div>
          </div>
       </div>
    );
