@@ -25,7 +25,8 @@ const Menu: React.FunctionComponent<IMenuProps> = props => {
             <h2>Menu</h2>
             <ul>
                
-               <li><a href="localsPage">Home</a></li>
+               <li>
+                  <a href="localsPage">Home</a></li>
                <li>
                   <a href="chat" className='chat' >
                   Chat

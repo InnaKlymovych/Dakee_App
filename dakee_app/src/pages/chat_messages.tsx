@@ -6,7 +6,7 @@ import photo from '../images/photo1.jpg';
 import star_white from '../images/icons/star_white.svg';
 
 
-export interface IChat_messagesProps {};
+export interface IChatMessagesProps {};
 
 const buttonHandler = (event: MouseEvent) => {
    window.location.href="localsPage"
@@ -15,7 +15,7 @@ const buttonHandler = (event: MouseEvent) => {
 const buttonHandler1 = (event: MouseEvent) => {
    window.location.href="chat"
 }
-const Chat_messages: React.FunctionComponent<IChat_messagesProps> = props => {
+const ChatMessages: React.FunctionComponent<IChatMessagesProps> = props => {
 
 var simble = ">";
    return (
@@ -62,4 +62,4 @@ var simble = ">";
    );
 }
 
-export default Chat_messages;
+export default ChatMessages;

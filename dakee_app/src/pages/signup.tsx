@@ -1,5 +1,5 @@
 import React  from 'react';
-import LoginForm from '../components/loginForm';
+import {LoginForm} from '../components/loginForm';
 import {MouseEvent} from 'react';
 import logo_img from '../images/logo.svg';
 import back from '../images/icons/back.svg';

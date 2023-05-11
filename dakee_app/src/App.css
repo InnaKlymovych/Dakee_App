@@ -1471,3 +1471,115 @@ input[type=range]:focus {
 .friend_stars>img{
   margin-right: 6px;
 }
+
+#friend_profile {
+  background-color: var(--white);
+  color: var(--orange);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  
+}
+
+#friend_profile>.logo_small{
+  position: relative;
+  left:80vw;
+  top: 36px;
+  width: 100px;
+  height: 70px;
+  position: fixed;
+}
+
+#friend_profile>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+#friend_profile>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
+}
+
+.friend_profile_box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 80%;
+  margin: 100px 40px 20px 60px;
+  justify-content: space-between;
+  
+}
+
+.friend_profile_photo{
+  height: 193px;
+  margin: 0 auto;
+}
+
+.friend_profile_photo>img{
+  width: 193px;
+  height: 193px;
+  border-radius: 50%;
+  
+}
+
+.friend_profile_box>h2{
+  color: var(--orange);
+  margin-left: 0px;
+}
+
+.friend_location{
+  display: flex;
+  flex-direction: row;
+}
+
+.friend_location>img{
+  margin-right: 10px;
+}
+
+.about_friend>h4{
+  color: var(--orange);
+  margin-left: 0px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.about_friend>p{
+  text-align: inherit;
+}
+
+.friend_advices>h4{
+  color: var(--orange);
+  margin-left: 0px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+
+}
+
+.travel_experience>ul , .friend_advices>ul{
+  list-style: none;
+}
+
+.travel_experience>ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.travel_experience>ul>li{
+  margin-right: 31px;
+}

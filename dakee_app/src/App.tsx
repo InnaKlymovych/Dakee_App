@@ -20,8 +20,9 @@ import LocalSearch from './pages/localSearch';
 import Filter from './pages/filter';
 import Menu from './pages/menu';
 import Chat from './pages/chat';
-import Chat_messages from './pages/chat_messages';
-
+import ChatMessages from './pages/chat_messages';
+import FriendProfile from './pages/friend_profile';
+import Profile from './pages/profile';
 
 export interface IApplicationProps {}
 
@@ -48,7 +49,9 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='filter' element={ <Filter />} />
       <Route path='menu' element={ <Menu />} />
       <Route path='chat' element={ <Chat />} />
-      <Route path='chat_messages' element={ <Chat_messages />} />
+      <Route path='chat_messages' element={ <ChatMessages />} />
+      <Route path='friend_profile' element={ <FriendProfile />} />
+      <Route path='profile' element={ <Profile />} />
     </Routes>
   </BrowserRouter>
   );
