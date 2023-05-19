@@ -23,6 +23,8 @@ import Chat from './pages/chat';
 import ChatMessages from './pages/chat_messages';
 import FriendProfile from './pages/friend_profile';
 import Profile from './pages/profile';
+import Profileb from './pages/profileb';
+import Profilec from './pages/profilec';
 
 export interface IApplicationProps {}
 
@@ -51,7 +53,9 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='chat' element={ <Chat />} />
       <Route path='chat_messages' element={ <ChatMessages />} />
       <Route path='friend_profile' element={ <FriendProfile />} />
-      <Route path='profile' element={ <Profile />} />
+      <Route path='profile' element={ <Profile />} />  
+      <Route path='profileb' element={ <Profileb />} /> 
+      <Route path='profilec' element={ <Profilec />} /> 
     </Routes>
   </BrowserRouter>
   );
