@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { ChangeEvent, FormEvent } from 'react';
 import {MouseEvent} from 'react';
 import logo_img from '../images/logo.svg';
 import facebook from '../images/icons/facebook.svg';
@@ -7,24 +7,82 @@ import apple from '../images/icons/apple.svg';
 import back from '../images/icons/back.svg';
 
 
-export interface ILoginbPageProps {};
+interface LoginbPageState {
+   username: string;
+   password: string;
+   errors: {
+      username: string;
+      password: string;
+   };
+}
 
-const LoginbPage: React.FunctionComponent<ILoginbPageProps> = props => {
+const buttonHandler = (event: MouseEvent) => {
+   window.location.href="login"
+}
 
+const buttonHandler1 = (event: MouseEvent) => {
+   window.location.href="localsPage"
+}
 
-   const handleClick = (event: MouseEvent) => {
-      window.location.href="login"
+export class LoginbPage extends React.Component<{}, LoginbPageState> {
+   constructor(props: {}) {
+      super(props);
+      this.state = {
+         username: '',
+         password: '',
+         errors: {
+            username: '',
+            password: '',
+         },
+      };
    }
+   handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = event.target;
+      let errors = { ...this.state.errors };
 
-   const buttonHandler1 = (event: MouseEvent) => {
-      window.location.href="localsPage"
-   }
+      switch (name) {
+         case 'username':
+            errors.username = value.length === 0 ? 'Username is required!' : '';
+            break;
+         case 'password':
+            errors.password = value.length === 0 ? 'Password is required!' : '';
+            break;
+         default:
+            break;
+      }
+
+      
+   };
+
+   handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      const { username, password, errors } = this.state;
+
+      // Check for form errors
+      if (username.length === 0) {
+         errors.username = 'Username is required!';
+      }
+      if (password.length === 0) {
+         errors.password = 'Password is required!';
+      }
+
+      // If there are no errors, perform login
+      if (errors.username === '' && errors.password === '') {
+         console.log('Performing login...');
+         // Add your login logic here
+      }
+
+      this.setState({ errors });
+   };
+
+   render() {
+      const { username, password, errors } = this.state;
 
    return (
       <div className="signup" id='signup'>
       
       <div className="back">
-         <button className='back' onClick={handleClick}>
+         <button className='back' onClick={buttonHandler}>
             <img src={back} alt="back" />
          </button>
       </div>
@@ -36,28 +94,31 @@ const LoginbPage: React.FunctionComponent<ILoginbPageProps> = props => {
       <h3>Log In</h3>
 
       <div className='login_form' >
-      <form >
       
-         <div className="input_mail">
-            <input
-            name='email'
-            placeholder="E-mail" 
-            id="email"
-            type="email"/>
-         
-         </div>
-         <div className="input_password">
-            <input
-            placeholder="Password"
-            name="password"
-            id="password"
-            type="password"/>
-            
-         
-         </div>
+      <form onSubmit={this.handleSubmit} noValidate>
+               <div className="input_name">
+                  <input
+                     onChange={this.handleChange}
+                     placeholder="Username"
+                     type="text"
+                     name="username"
+                     value={username}
+                  />
+                  {errors.username && <span style={{ color: 'red' }}>{errors.username}</span>}
+               </div>
+               <div className="input_password">
+                  <input
+                     onChange={this.handleChange}
+                     placeholder="Password"
+                     type="password"
+                     name="password"
+                     value={password}
+                  />
+                  {errors.password && <span style={{ color: 'red' }}>{errors.password}</span>}
+               </div>
 
          
-         <button onClick={buttonHandler1} className='log_in' id='log_in' >Log in</button>
+         <button onClick={buttonHandler1} type="submit" className='log_in' id='log_in' >Log in</button>
       </form>
       </div>
 
@@ -71,6 +132,6 @@ const LoginbPage: React.FunctionComponent<ILoginbPageProps> = props => {
 
    </div>
    );
-}
+};
 
-export default LoginbPage;
+}

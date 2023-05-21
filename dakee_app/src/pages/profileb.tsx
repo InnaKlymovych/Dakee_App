@@ -11,11 +11,11 @@ export interface IProfilebProps {};
 var less = ">";
 
 const buttonHandler = (event: MouseEvent) => {
-   window.location.href="localsPage"
+   window.location.href="profile"
 }
 
 const buttonHandler1 = (event: MouseEvent) => {
-   window.location.href="chat"
+   window.location.href="menu"
 }
 
 const buttonHandler2 = (event: MouseEvent) => {

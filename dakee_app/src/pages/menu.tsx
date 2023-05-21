@@ -34,7 +34,7 @@ const Menu: React.FunctionComponent<IMenuProps> = props => {
                   </a>
                </li>
                <li><a href="profile">My profile</a></li>
-               <li><a href="FAQ">FAQ</a></li>
+               <li><a href="faq">FAQ</a></li>
             </ul>
             
          </div>

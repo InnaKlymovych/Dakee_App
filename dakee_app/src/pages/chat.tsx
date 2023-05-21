@@ -11,7 +11,7 @@ const buttonHandler = (event: MouseEvent) => {
 }
 
 const buttonHandler1 = (event: MouseEvent) => {
-   window.location.href="chat"
+   window.location.href="menu"
 }
 const Chat: React.FunctionComponent<IChatProps> = props => {
 

@@ -13,7 +13,7 @@ const buttonHandler = (event: MouseEvent) => {
 }
 
 const buttonHandler1 = (event: MouseEvent) => {
-   window.location.href="chat"
+   window.location.href="menu"
 }
 const Profile: React.FunctionComponent<IProfileProps> = props => {
 
@@ -50,10 +50,10 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
             </div>
             <div className="my_menu">
                <ul>
-                  <li><a href="Get_rewards">Get rewards</a></li>
+                  <li><a href="get_rewards">Get rewards</a></li>
                   <li><a href="Saved_rewards">Saved rewards</a></li>
-                  <li><a href="Edit_profile">Edit profile</a></li>
-                  <li><a href="Log_out">Log out</a></li>
+                  <li><a href="profileb">Edit profile</a></li>
+                  <li><a href="login">Log out</a></li>
                </ul>
             </div>
          </div>

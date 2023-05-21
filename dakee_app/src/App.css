@@ -1910,3 +1910,153 @@ input[type=range]:focus {
   margin-top: 30px;
   align-self: center;
 }
+
+/*GETREWARDS*/
+
+#getRewards {
+  background-color: var(--white);
+  color: var(--orange);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  
+}
+
+#getRewards>.logo_small{
+  position: relative;
+  left:80vw;
+  top: 36px;
+  width: 100px;
+  height: 70px;
+  position: fixed;
+}
+
+#getRewards>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+#getRewards>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
+}
+
+.getrewards_box{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 100px 48px 50px 48px;
+  justify-content: space-between;
+  
+}
+
+.getrewards_box>h1{
+  color: var(--orange);
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 38px;
+  margin-left: 0;
+  margin-top: 74px;
+}
+
+/*FAQ*/
+
+.faq{
+  margin-top: 100px;
+  height: 80%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq>.logo_small{
+  position: relative;
+  left:80vw;
+  top: 36px;
+  width: 100px;
+  height: 70px;
+  position: fixed;
+}
+
+.faq>.logo_small>.local_circle{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 50% ;
+  right: 50%;
+  border-width: 2px;
+  border-color: var(--white);
+  border-style: solid;
+  background-color: var(--pink-dark);
+  
+}
+
+.faq>.logo_small>.local_circle>p{
+  color: white;
+  margin-top: 2px;
+}
+
+.faq_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.faq_box>input{
+  border-radius: 20px;
+  border: 2px solid #fff;
+  color: white;
+  background: none;
+  height: 36px;
+  padding-right: 115px;
+  margin-top: 20px;
+  
+}
+
+.faq_box>h2{
+  font-size: 36px;
+  
+}
+
+.questions_faq{
+  height: 100%;
+  color: var(--white);
+  margin: 50px;
+}
+
+.questions_faq>ul>li{
+  margin-top: 50px;
+  font-size: 15px;
+  list-style: none;
+
+}
+
+.questions_faq>ul>li>img{
+  padding-right: 10px;
+}
+
+.questions_faq>ul>.outputText{
+  text-align: left;
+  margin-top: 10px;
+}
+

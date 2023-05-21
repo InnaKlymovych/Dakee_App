@@ -13,7 +13,7 @@ const buttonHandler = (event: MouseEvent) => {
 }
 
 const buttonHandler1 = (event: MouseEvent) => {
-   window.location.href="chat"
+   window.location.href="menu"
 }
 const ChatMessages: React.FunctionComponent<IChatMessagesProps> = props => {
 

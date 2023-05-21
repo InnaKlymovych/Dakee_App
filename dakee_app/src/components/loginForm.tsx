@@ -1,4 +1,5 @@
 import React from 'react';
+import { MouseEvent } from 'react';
 
 interface LoginFormProps {
    name?: any;
@@ -17,7 +18,9 @@ interface LoginFormState {
 
 const Regex = RegExp(/^\s?[A-Z0–9]+[A-Z0–9._+-]{0,}@[A-Z0–9._+-]+\.[A-Z0–9]{2,4}\s?$/i);
 
-
+const handleClick = (event: MouseEvent) => {
+   window.location.href="loginb"
+}
 export class LoginForm extends React.Component<LoginFormProps, LoginFormState> 
 {
 
@@ -111,7 +114,7 @@ render() {
          </div>
 
          
-      <button type="submit" id="login-button" >
+      <button onClick={handleClick} type="submit" id="login-button" >
          Sign up
       </button>
       </form>

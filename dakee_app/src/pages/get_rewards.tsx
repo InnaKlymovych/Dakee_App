@@ -2,27 +2,25 @@ import React from 'react';
 import back_red from '../images/icons/back_red.png';
 import { MouseEvent } from 'react';
 import logo_red from '../images/logo_red.svg';
-import my_photo from '../images/icons/my_profile.svg';
+import red_star from '../images/preferences/Star-red.svg';
+import ryanair from '../images/icons/Ryanair.svg';
 
 
-export interface IProfilecProps {};
 
-var less = ">";
+export interface IGetRewardsProps {};
 
 const buttonHandler = (event: MouseEvent) => {
-   window.location.href="profileb"
+   window.location.href="profile"
 }
 
 const buttonHandler1 = (event: MouseEvent) => {
    window.location.href="menu"
 }
-
-
-const Profilec: React.FunctionComponent<IProfilecProps> = props => {
+const GetRewards: React.FunctionComponent<IGetRewardsProps> = props => {
 
 
    return (
-      <div id="my_profilec" className='my_profilec '>
+      <div id="getRewards" className='getRewards '>
          
          <button className='tutorial_back_button' onClick={buttonHandler}>
             <img src={back_red} alt="back" />
@@ -34,18 +32,22 @@ const Profilec: React.FunctionComponent<IProfilecProps> = props => {
             </div>
          </div>
 
-         <div className="my_profilec_box">
-            <h1>Edit Profile</h1>
-            <div className="my_profile_info">
-               <img src={my_photo} alt=""/>
-               <a href="#">Change photo {less}</a>
+         <div className="getrewards_box">
+            <h1>Rewards</h1>
+            <p>175 <img src={red_star} alt="" /> </p>
+            <div className="rewards">
+               <div className="reward1">
+                  <img src={ryanair} alt="" />
+               </div>
+               
+               
+
+            
             </div>
-            <h2>Yay! <br /> Your profile was successfully <br /> updated!</h2>
-            <button>Ok</button>
             
          </div>
       </div>
    );
 };
 
-export default Profilec;
+export default GetRewards;

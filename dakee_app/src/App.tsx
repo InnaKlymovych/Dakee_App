@@ -3,7 +3,7 @@ import { Routes , Route,  BrowserRouter } from 'react-router-dom'
 import './App.css';
 import HomePage from './pages/home';
 import LoginPage from './pages/login';
-import LoginbPage from './pages/loginb';
+import {LoginbPage} from './pages/loginb';
 import SignupPage from './pages/signup';
 import TutorialPage from './pages/tutorial';
 import TutorialbPage from './pages/tutorialb';
@@ -25,6 +25,9 @@ import FriendProfile from './pages/friend_profile';
 import Profile from './pages/profile';
 import Profileb from './pages/profileb';
 import Profilec from './pages/profilec';
+import GetRewards from './pages/get_rewards';
+import Faq from './pages/faq';
+
 
 export interface IApplicationProps {}
 
@@ -56,6 +59,8 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='profile' element={ <Profile />} />  
       <Route path='profileb' element={ <Profileb />} /> 
       <Route path='profilec' element={ <Profilec />} /> 
+      <Route path='get_rewards' element={ <GetRewards />} />
+      <Route path='faq' element={ <Faq />} />  
     </Routes>
   </BrowserRouter>
   );
