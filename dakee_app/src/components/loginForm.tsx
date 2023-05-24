@@ -1,48 +1,20 @@
 import React , {useState} from 'react';
-import Axios from 'axios';
+
 
 
 
 const LoginForm = () => {
-   const [name, setName] = useState('');
-   const [email, setEmail] = useState('');
-   const [password, setPassword] = useState('');
-
-   const register = () => {
-
-      if (!name || !email || !password) {
-      console.log("Please provide all required fields.");
-      return;
-   }
-
    
-      const formData = {
-      username: name,
-      email: email,
-      password: password
-      };
-
-      Axios.post("http://localhost:3001/signup", formData)
-      .then(response => {
-         console.log(response);
-         
-      })
-      .catch(error => {
-         console.log("An error occurred while registering. Please try again later.");
-         
-      });
-   };
    
 
-   
 
    return (
    
       <div className="login-box">
-      <form  noValidate action='/signup' method='POST'>
+      <form  noValidate action='localhost:3001/test' method='POST'>
          <div className="input_name">
             <input
-            onChange={e => setName(e.target.value)}
+            /*onChange={e => setName(e.target.value)}*/
             placeholder="Name" 
             id="name"
             type="text"
@@ -52,7 +24,7 @@ const LoginForm = () => {
 
          <div className="input_mail">
             <input
-            onChange={e => setEmail(e.target.value)}
+            /*onChange={e => setEmail(e.target.value)}*/
             name='email'
             placeholder="E-mail" 
             id="email"
@@ -62,7 +34,7 @@ const LoginForm = () => {
          </div>
          <div className="input_password">
             <input
-            onChange={e => setPassword(e.target.value)}
+            /*onChange={e => setPassword(e.target.value)}*/
             placeholder="Password"
             name="password"
             id="password"
@@ -73,7 +45,7 @@ const LoginForm = () => {
          </div>
 
          
-      <button onClick={register} type="submit" id="login-button" >
+      <button type="submit" id="login-button" >
          Sign up
       </button>
       </form>
