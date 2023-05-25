@@ -27,7 +27,7 @@ import Profileb from './pages/profileb';
 import Profilec from './pages/profilec';
 import GetRewards from './pages/get_rewards';
 import Faq from './pages/faq';
-
+import Nointernet from './pages/nointernet';
 
 export interface IApplicationProps {}
 
@@ -61,6 +61,7 @@ const Application: React.FunctionComponent<IApplicationProps> = (props) => {
       <Route path='profilec' element={ <Profilec />} /> 
       <Route path='get_rewards' element={ <GetRewards />} />
       <Route path='faq' element={ <Faq />} />  
+      <Route path='nointernet' element={ <Nointernet />} />  
     </Routes>
   </BrowserRouter>
   );
