@@ -91,7 +91,7 @@ export class LoginbPage extends React.Component<{}, LoginbPageState> {
             <img src={logo_img} alt="img_logo" />
       </div>
 
-      <h3>Log In</h3>
+      <h3>Log in</h3>
 
       <div className='login_form' >
       

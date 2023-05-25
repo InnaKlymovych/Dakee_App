@@ -10,15 +10,19 @@ export interface ILocalSearchProps {};
 const simble3 = ">";
 
 const LocalSearch: React.FunctionComponent<ILocalSearchProps> = props => {
+   
    const buttonHandler = (event: MouseEvent) => {
       window.location.href="localsPage"
    }
+
    const buttonHandler1 = (event: MouseEvent) => {
       window.location.href="menu"
    }
+
    const buttonHandler2 = (event: MouseEvent) => {
       window.location.href="filter"
    }
+   
    return (
    <div className='local_b' >
          <button className='tutorial_back_button' onClick={buttonHandler}>
@@ -39,7 +43,7 @@ const LocalSearch: React.FunctionComponent<ILocalSearchProps> = props => {
 
          <button className='localb_search' onClick={buttonHandler2} >
             <img src={filter} alt="filter" />
-            Filters Search {simble3}
+            Filters <br /> Search {simble3}
          </button>
       </form>
 

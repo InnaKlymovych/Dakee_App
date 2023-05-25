@@ -24,6 +24,7 @@ const LocalPage: React.FunctionComponent<ILocalPageProps> = props => {
    const buttonHandler2 = (event: MouseEvent) => {
       window.location.href="menu"
    }
+   
    return (
    <div className='local' >
       <div className="logo_small">
@@ -39,7 +40,7 @@ const LocalPage: React.FunctionComponent<ILocalPageProps> = props => {
          <input type="text" placeholder= 'Choose a city...' />
 
          <button className='filter_search' onClick={buttonHandler1}>
-            <p><img src={filter} alt="filter" />Filters <br /> Search {simble3}</p> 
+            <img src={filter} alt="filter" />Filters <br /> Search {simble3}
          </button>
          
       </form>

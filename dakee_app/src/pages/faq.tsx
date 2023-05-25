@@ -11,11 +11,11 @@ const Faq: React.FunctionComponent<IFaqProps> = props => {
    
    const buttonHandler = (event: MouseEvent) => {
       
-      window.location.href="menu"
+      window.location.href="localsPage"
    }
 
    const buttonHandler1 = (event: MouseEvent) => {
-      window.location.href="chat"
+      window.location.href="menu"
    }
 
    
