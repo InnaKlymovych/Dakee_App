@@ -1,0 +1,24 @@
+version: '3'
+services:
+  frontend:
+    build: ./dakee_app/.
+    ports:
+      - 3000:3000
+    
+
+  backend:
+    build: ./server/.
+    ports:
+      - 3001:3001
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 31101987
+      MYSQL_DATABASE: dakee_app
+      MYSQL_USER: my_user
+      MYSQL_PASSWORD: 31101987

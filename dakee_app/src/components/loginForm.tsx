@@ -1,8 +1,6 @@
 import React , {useState} from 'react';
 
 
-
-
 const LoginForm = () => {
    
    
@@ -11,12 +9,13 @@ const LoginForm = () => {
    return (
    
       <div className="login-box">
-      <form  noValidate action='localhost:3001/test' method='POST'>
+      <form  noValidate action='http://127.0.0.1:3001/signup' method='POST'>
          <div className="input_name">
             <input
             /*onChange={e => setName(e.target.value)}*/
             placeholder="Name" 
             id="name"
+            name= "name"
             type="text"
             required/>
             

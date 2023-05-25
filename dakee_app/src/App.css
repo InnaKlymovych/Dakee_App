@@ -725,10 +725,11 @@ a{
 /*QUESTIONAIREE !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 .questionairee{
+  
   height: 100%;
-
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: nowrap;
   justify-content: space-around;
 }

@@ -1,5 +1,5 @@
 import express from 'express';
-import {createRecord} from './db.js';
+import {createUser} from './db.js';
 import bodyParser from 'body-parser';
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false }); 
@@ -10,23 +10,20 @@ app.post ('/test', urlencodedParser , (req , res) => {
    console.log("Hello");
 })
 
-app.post('/signup' , urlencodedParser , (req , res) => {
+app.post("/signup", urlencodedParser, async (req, res) => {
    const name = req.body.name;
    const email = req.body.email;
    const password = req.body.password;
 
-   db.query(
-      'INSERT INTO newusers (name , email , password) VALUES(?, ?, ?)',
-      [name , email , password] , (err , result) => {
-         if (err){
-            console.log(err)
-         }
-         else {
-            res.send("Value Inserted");
-         }
-      }
-      );
-} )
+   const queryResult = await createUser(name, email, password);
+
+   console.log(queryResult);
+   if (queryResult.success) {
+      res.redirect("http://localhost:3000/");
+   } else {
+      res.redirect("http://localhost:3000/signup");
+   }
+});
 
 app.post('/login' , (req , res) => {
    const name = req.body.name;

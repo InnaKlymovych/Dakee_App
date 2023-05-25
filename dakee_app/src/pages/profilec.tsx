@@ -17,7 +17,9 @@ const buttonHandler1 = (event: MouseEvent) => {
    window.location.href="menu"
 }
 
-
+const buttonHandler2 = (event: MouseEvent) => {
+   window.location.href="profile"
+}
 const Profilec: React.FunctionComponent<IProfilecProps> = props => {
 
 
@@ -41,7 +43,7 @@ const Profilec: React.FunctionComponent<IProfilecProps> = props => {
                <a href="#">Change photo {less}</a>
             </div>
             <h2>Yay! <br /> Your profile was successfully <br /> updated!</h2>
-            <button>Ok</button>
+            <button onClick={buttonHandler2} >Ok</button>
             
          </div>
       </div>

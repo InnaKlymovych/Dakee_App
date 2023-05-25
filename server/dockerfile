@@ -1,0 +1,16 @@
+# Pull the latest base image
+FROM node:13.12.0-alpine  
+
+# set your working directory  
+WORKDIR /app  
+
+# install application dependencies  
+COPY package.json ./  
+RUN npm install --silent  
+
+
+# add app  
+COPY . ./  
+
+# will start app  
+CMD ["npm", "dev"] 
