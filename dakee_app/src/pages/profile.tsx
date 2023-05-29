@@ -1,10 +1,21 @@
-import React from 'react';
+import React , {useState} from 'react';
 import back_red from '../images/icons/back_red.png';
 import { MouseEvent } from 'react';
 import logo_red from '../images/logo_red.svg';
 import my_photo from '../images/icons/my_profile.svg';
 import red_star from '../images/preferences/Star-red.svg';
 
+interface User {
+   // Define the properties of the user object
+   cityAdvices: string[];
+   id: number;
+   age: string;
+   gender: string;
+   currentCity: string;
+   travelPrefs: string[];
+   name: string;
+   email: string;
+   }
 
 export interface IProfileProps {};
 
@@ -17,6 +28,38 @@ const buttonHandler1 = (event: MouseEvent) => {
 }
 const Profile: React.FunctionComponent<IProfileProps> = props => {
 
+   const queryParams = new URLSearchParams(window.location.search);
+   const encodedData = queryParams.get("data");
+
+   if (!encodedData) {
+      window.location.href = "/signup";
+   }
+   const userID = JSON.parse(decodeURIComponent(encodedData || ""));
+   console.log(userID);
+   let userData;
+
+   let [userModel , setUserModel] = useState<User>(() => ({
+      id: userID,
+      age: "",
+      gender: "",
+      currentCity: "",
+      cityAdvices: [],
+      travelPrefs: [],
+      name: "",
+      email: ""
+   }));
+
+   const get_user_profile = async (data: any) => {
+      
+      const req = await fetch("http://localhost:3001/get_user_profile/" + data.id) ;
+      
+      const res = await req.json();
+      userData = res;
+
+      userModel.name = res.profile.name;
+      console.log(res);
+   }
+   get_user_profile(userModel.id);
 
    return (
       <div id="my_profile" className='my_profile '>
@@ -35,7 +78,7 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
             <h1>My profile</h1>
             <div className="my_profile_info">
                <img src={my_photo} alt=""/>
-               <h2>Inna</h2>
+               <h2>{userData.profile.name}</h2>
                <div className="my_stars">
                   <img src={red_star} alt="" />
                   <img src={red_star} alt="" />

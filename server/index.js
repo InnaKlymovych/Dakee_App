@@ -1,52 +1,78 @@
-import express from 'express';
-import {createUser} from './db.js';
-import bodyParser from 'body-parser';
+import express from "express";
+import { createUser, getUserById, finishSignup, get_profile_by_userID } from "./db.js";
+import bodyParser from "body-parser";
+import cors from "cors";
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false }); 
 const app = express();
 
-app.post ('/test', urlencodedParser , (req , res) => {
-   console.log(req.body);
-   console.log("Hello");
-})
+app.use(cors());
+app.use(bodyParser.json());
 
-app.post("/signup", urlencodedParser, async (req, res) => {
-   const name = req.body.name;
-   const email = req.body.email;
-   const password = req.body.password;
+app.post("/test", (req, res) => {
 
-   const queryResult = await createUser(name, email, password);
-
-   console.log(queryResult);
-   if (queryResult.success) {
-      res.redirect("http://localhost:3000/");
-   } else {
-      res.redirect("http://localhost:3000/signup");
-   }
 });
 
-app.post('/login' , (req , res) => {
-   const name = req.body.name;
-   const password = req.body.password;
+app.get("/user/:id", async (req, res) => {
+  const queryResult = await getUserById(req.params.id);
+  res.json(queryResult);
+});
+app.post("/update_user/:id", async (req, res) => {
+  const queryResult = await finishSignup(req.body);
+  res.json(queryResult);
+});
+
+app.post("/signup", async (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const password = req.body.password;
+
+  const queryResult = await createUser(name, email, password);
+  res.json(queryResult);
+});
+
+
+
+app.get("/get_user_profile/:id" , async (req, res) =>{
+   
+   const user_id = req.params.id;
+   const userquery = await getUserById(user_id);
+   console.log("index.js" , userquery.users.name);
+   let queryResult = await get_profile_by_userID(user_id);
+   
+   queryResult.profile.name = userquery.users.name;
+   queryResult.profile.email = userquery.users.email;
+   
+   
+   res.json(queryResult);
+   
+   
+
+});
+
+
+
+app.post("/login", (req, res) => {
+  const name = req.body.name;
+  const password = req.body.password;
 
    db.query(
-      'SELECT * FROM newusers WHERE name = ? AND password = ? ',
-      [name ,  password] , (err , result) => {
-         if (err){
-            req.setEncoding({err: err});
-         }
-         else {
-            if(result.length > 0){
-               res.send(result);
-            }
-            else{
-               res.send({message: "WATCH USERNAME OR PASSWORD"});
-            }
+    "SELECT * FROM newusers WHERE name = ? AND password = ? ",
+   [name, password],
+   (err, result) => {
+      if (err) {
+         req.setEncoding({ err: err });
+      } else {
+         if (result.length > 0) {
+         res.send(result);
+         } else {
+         res.send({ message: "WATCH USERNAME OR PASSWORD" });
          }
       }
-      );
-} )
+   }
+   );
+});
 
-app.listen(3001, ()=> {
+
+app.listen(3001, () => {
    console.log("Hi Inna ; your server is running on port 3001");
-} );
+});

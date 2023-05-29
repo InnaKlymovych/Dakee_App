@@ -1,8 +1,10 @@
-// service-worker.ts
+// service-worker.tsx
+declare const self: ServiceWorkerGlobalScope;
+
 self.addEventListener('install', (event: any) => {
    event.waitUntil(
       caches.open('app-cache').then((cache: any ) => {
-       return cache.addAll(['/', './index.html', '/nointernet.tsx']); // Add the paths to your app's main page and any other important pages
+      return cache.addAll(['/', './index.html', '/nointernet.tsx']); // Add the paths to your app's main page and any other important pages
       })
    );
    });

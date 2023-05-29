@@ -1,23 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import './App.css';
-import Aplication from "./App";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
 
-if ('serviceWorker' in navigator) {
-   window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.tsx')
-      .then(registration => {
-         console.log('Service Worker registered:', registration);
-      })
-      .catch(error => {
-         console.error('Error registering Service Worker:', error);
-      });
-   });
-}
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
 
-ReactDOM.render(
    <React.StrictMode>
-      <Aplication />
-   </React.StrictMode> ,
-   document.getElementById('root')
+      <App />
+   </React.StrictMode>
+   
 );
+
+serviceWorkerRegistration.register();
+
+reportWebVitals();
