@@ -1,5 +1,5 @@
 // service-worker.tsx
-declare const self: ServiceWorkerGlobalScope;
+declare const self: (ServiceWorkerGlobalScope);
 
 self.addEventListener('install', (event: any) => {
    event.waitUntil(

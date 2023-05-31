@@ -3,11 +3,15 @@ import { createUser, getUserById, finishSignup, get_profile_by_userID } from "./
 import bodyParser from "body-parser";
 import cors from "cors";
 
+import swaggerUi from "swagger-ui-express";
+import swaggerFile from "./swagger/output.json";
+
+
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-
+app.get('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.post("/test", (req, res) => {
 
 });
@@ -76,3 +80,19 @@ app.post("/login", (req, res) => {
 app.listen(3001, () => {
    console.log("Hi Inna ; your server is running on port 3001");
 });
+
+/*const express = require('express');
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
+/*const router = require('./routers/personRouter')
+
+const router = express.Router();
+
+app.use(express.json());
+
+app.use('/person', router.personRouter);
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.listen(3000, () => {
+   console.log(`Running on 3000`);
+});*/

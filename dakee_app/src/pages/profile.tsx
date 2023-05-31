@@ -36,8 +36,9 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
    }
    const userID = JSON.parse(decodeURIComponent(encodedData || ""));
    console.log(userID);
-   let userData;
-
+   
+   //let userData;
+   
    let [userModel , setUserModel] = useState<User>(() => ({
       id: userID,
       age: "",
@@ -54,7 +55,7 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
       const req = await fetch("http://localhost:3001/get_user_profile/" + data.id) ;
       
       const res = await req.json();
-      userData = res;
+      //userData = res;//
 
       userModel.name = res.profile.name;
       console.log(res);
@@ -76,9 +77,9 @@ const Profile: React.FunctionComponent<IProfileProps> = props => {
 
          <div className="my_profile_box">
             <h1>My profile</h1>
-            <div className="my_profile_info">
+         <div className="my_profile_info">
                <img src={my_photo} alt=""/>
-               <h2>{userData.profile.name}</h2>
+               <h2>Inna</h2>
                <div className="my_stars">
                   <img src={red_star} alt="" />
                   <img src={red_star} alt="" />
