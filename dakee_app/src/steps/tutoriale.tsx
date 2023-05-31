@@ -23,7 +23,7 @@ const TutorialePage: React.FunctionComponent<ITutorialePageProps> = ({
       <p>You can edit your anwsers later.</p>
 
       <button className="done" onClick={callback}>
-        Done
+        Ok
       </button>
     </div>
   );

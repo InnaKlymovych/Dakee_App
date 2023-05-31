@@ -4,11 +4,15 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 import swaggerUi from "swagger-ui-express";
-import swaggerFile from "./swagger/output.json";
+import swaggerFile from "./swagger_output.json" assert { "type": "json" };
 
+import swaggerUiDist from "swagger-ui-dist"
+import { SwaggerUIBundle, SwaggerUIStandalonePreset } from "swagger-ui-dist"
+const pathToSwaggerUi = swaggerUiDist.getAbsoluteFSPath()
 
 const app = express();
 
+app.use(express.static(pathToSwaggerUi))
 app.use(cors());
 app.use(bodyParser.json());
 app.get('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
@@ -17,21 +21,21 @@ app.post("/test", (req, res) => {
 });
 
 app.get("/user/:id", async (req, res) => {
-  const queryResult = await getUserById(req.params.id);
-  res.json(queryResult);
+   const queryResult = await getUserById(req.params.id);
+   res.json(queryResult);
 });
 app.post("/update_user/:id", async (req, res) => {
-  const queryResult = await finishSignup(req.body);
-  res.json(queryResult);
+   const queryResult = await finishSignup(req.body);
+   res.json(queryResult);
 });
 
 app.post("/signup", async (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const password = req.body.password;
+   const name = req.body.name;
+   const email = req.body.email;
+   const password = req.body.password;
 
-  const queryResult = await createUser(name, email, password);
-  res.json(queryResult);
+   const queryResult = await createUser(name, email, password);
+   res.json(queryResult);
 });
 
 
@@ -56,8 +60,8 @@ app.get("/get_user_profile/:id" , async (req, res) =>{
 
 
 app.post("/login", (req, res) => {
-  const name = req.body.name;
-  const password = req.body.password;
+   const name = req.body.name;
+   const password = req.body.password;
 
    db.query(
     "SELECT * FROM newusers WHERE name = ? AND password = ? ",
@@ -81,18 +85,3 @@ app.listen(3001, () => {
    console.log("Hi Inna ; your server is running on port 3001");
 });
 
-/*const express = require('express');
-const swaggerUi = require('swagger-ui-express')
-const swaggerFile = require('./swagger_output.json')
-/*const router = require('./routers/personRouter')
-
-const router = express.Router();
-
-app.use(express.json());
-
-app.use('/person', router.personRouter);
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
-
-app.listen(3000, () => {
-   console.log(`Running on 3000`);
-});*/

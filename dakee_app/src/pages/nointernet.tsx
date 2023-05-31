@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { MouseEvent } from 'react';
 import logo_red from '../images/logo_red.svg';
 import nointernet from '../images/icons/no_net.svg';
@@ -10,7 +9,7 @@ export interface INointernetProps {};
 
 
 const buttonHandler1 = (event: MouseEvent) => {
-   window.location.href="menu"
+   window.location.href="localsPage"
 }
 const Nointernet: React.FunctionComponent<INointernetProps> = props => {
 
@@ -28,7 +27,7 @@ const Nointernet: React.FunctionComponent<INointernetProps> = props => {
             <img src={nointernet} alt="nointernet" />
             <h2>Oops!</h2>
             <p>Looks like the Internet is on vacation. <br /> Check your connection and try again.</p>
-            <button>Try again</button>
+            <button onClick={buttonHandler1}>Try again</button>
          </div>
       </div>
    );

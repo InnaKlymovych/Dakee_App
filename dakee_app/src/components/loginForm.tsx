@@ -25,7 +25,7 @@ const LoginForm = () => {
     try {
       const req = await fetch("http://127.0.0.1:3001/signup", requestOptions);
       const res = await req.json();
-      console.log(res);
+      //console.log(res);
       if (res.success) {
         const encodedData = encodeURIComponent(
           JSON.stringify({ id: res.id, name: userData.name })

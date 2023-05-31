@@ -1,140 +1,140 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
-  },
-  "host": "localhost:3000",
-  "basePath": "/",
-  "schemes": [
-    "http"
-  ],
-  "paths": {
-    "/doc": {
+   "swagger": "2.0",
+   "info": {
+      "version": "1.0.0",
+      "title": "Dakee_App",
+      "description": "This is simple React project "
+   },
+   "host": "localhost:3000",
+   "basePath": "/",
+   "schemes": [
+      "http"
+   ],
+   "paths": {
+   "/doc": {
       "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
+         "description": "",
+         "parameters": [],
+         "responses": {}
       }
-    },
-    "/test": {
+   },
+   "/test": {
       "post": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
+         "description": "",
+         "parameters": [],
+         "responses": {}
       }
-    },
-    "/user/{id}": {
+   },
+   "/user/{id}": {
       "get": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "",
+      "parameters": [
+         {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
+         }
+         ],
+         "responses": {
+         "200": {
             "description": "OK"
-          }
-        }
+         }
+         }
       }
-    },
-    "/update_user/{id}": {
+   },
+   "/update_user/{id}": {
       "post": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "",
+      "parameters": [
+         {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
+         }
+         ],
+         "responses": {
+         "200": {
             "description": "OK"
-          }
-        }
+         }
+         }
       }
-    },
-    "/signup": {
+   },
+   "/signup": {
       "post": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "",
+      "parameters": [
+         {
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                }
-              }
+            "type": "object",
+            "properties": {
+               "name": {
+                  "example": "Inna"
+               },
+               "email": {
+                  "example": "InnaKlymovych@gmail.com"
+               },
+               "password": {
+                  "example": "12345tf"
+               }
             }
-          }
-        ],
-        "responses": {
-          "200": {
+            }
+         }
+      ],
+         "responses": {
+         "200": {
             "description": "OK"
-          }
-        }
+         }
       }
-    },
-    "/get_user_profile/{id}": {
+      }
+   },
+   "/get_user_profile/{id}": {
       "get": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "",
+      "parameters": [
+         {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
+         }
+         ],
+         "responses": {
+         "200": {
             "description": "OK"
-          }
-        }
+         }
+         }
       }
-    },
-    "/login": {
+   },
+   "/login": {
       "post": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "",
+      "parameters": [
+         {
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                }
-              }
+            "type": "object",
+            "properties": {
+               "name": {
+                  "example": "Inna"
+               },
+               "password": {
+                  "example": "1234"
+               }
             }
-          }
-        ],
-        "responses": {
-          "200": {
+            }
+         }
+      ],
+         "responses": {
+         "200": {
             "description": "OK"
-          }
-        }
+         }
       }
-    }
-  }
+      }
+   }
+}
 }

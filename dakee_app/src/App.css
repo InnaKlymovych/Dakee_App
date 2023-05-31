@@ -331,11 +331,15 @@ a {
   width: 11px;
   height: 23px;
   border: transparent;
+  margin-top: 30px ;
+  margin-left: 20px;
+  position: fixed;
 }
 
 .steps-container {
   flex: 1;
   display: flex;
+  margin: 0 20px;
 }
 
 #tutorial-container .tutorial-step {
@@ -409,6 +413,7 @@ a {
   justify-content: space-between;
   padding: 20px;
   padding-top: 36px;
+  position: relative;
 }
 
 #questions-container h2 {
@@ -879,7 +884,6 @@ a {
 /*LOCAL_SEARCH*/
 .local_b {
   margin-top: 100px;
-  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1478,12 +1482,13 @@ input[type=range]:focus {
   margin-bottom: 84px;
   border-radius: 20px;
   border: 2px solid var(--orange);
-  color: white;
+  color: var(--orange);
   background: none;
   height: 36px;
   width: 254px;
   text-align: left;
   padding-right: 115px;
+  padding-left: 10px;
 }
 
 .chating>.chat_buttom {
@@ -1995,7 +2000,7 @@ input[type=range]:focus {
 
 .faq {
   margin-top: 100px;
-  height: 80%;
+  /*height: 80%;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
